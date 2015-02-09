@@ -1,0 +1,28 @@
+@import '_settings'
+
+
+
+normalize-css()
+base()
+
+body
+  padding 50px
+  font-family 'brand-serif'
+  p
+    line-height 1.2
+
+
++below(1024px)
+  body
+    background olive
+
+.single
+  height 200px
+  col(1/2, cycle:2)
+  background pink
+  &.red
+    background red
+
+h1, h2, h3
+  font-family 'Lato'
+  font-weight 700

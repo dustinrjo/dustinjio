@@ -1,0 +1,18 @@
+doctype html
+html
+
+  head
+    meta(charset='utf8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge, chrome=1')
+    meta(name='description', content='The portfolio of Dustin Johnson')
+    meta(name='author', content= "Dustin Johnson")
+    //- uncomment if your site is responsive!
+    //- meta(name="viewport" content="width=device-width, initial-scale=1")
+    title= _path
+    link(href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic', rel='stylesheet', type='text/css')
+    != css()
+
+  body
+    block content
+
+    != js()

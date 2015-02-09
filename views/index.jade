@@ -1,0 +1,173 @@
+extends layout
+
+block content
+
+  header#header
+    .logo-box
+      img.headshot(src='img/dustin.png', alt='Dustin Johnson, Web Developer')
+      .main-title DUSTIN JOHNSON
+
+    div
+      ul.icon-set
+        li: a.icon-tumblr(target='_blank', href='http://ilimperium.tumblr.com')
+        li: a.icon-linkedin(target='_blank', href='http://www.linkedin.com/in/dustinrjo')
+        li: a.icon-twitter(target='_blank', href='http://twitter.com/ilimperium')
+        li: a.icon-github(target='_blank', href='http://github.com/dustinrjo')
+        li: a.icon-behance(target='_blank', href='http://www.behance.net/dustinj')
+        li: a.icon-feather(target='_blank', href='https://medium.com/@ilimperium')
+        li: a.icon-text-document(href='/DRJCV.pdf')
+        li: a.icon-location-pin(target='_blank', href='http://goo.gl/maps/GZK2b')
+        li: a.icon-mail(href='mailto:dustinrjo@gmail.com')
+        li: a.icon-code(target='_blank', href='https://coderwall.com/dustinrjo')
+
+    ul#nav-btns
+      li: a#designbtn.nav-button(href='#/designer') DESIGNER
+      li: a#devbtn.nav-button(href='#/developer') DEVELOPER
+      li: a#productbtn.nav-button(href='#/product') PRODUCT LEAD
+
+  section.tone-1
+    h1#section1 Interactive Design
+    p After studying interactive graphic design and new media theory through the SBCC SOMA program and USC's Institute of Multimedia Literacy program I became a design specialist consulting for digital media projects.  Across these projects I specialized in interactive design, page layout, templating, and typography for web, print, and mobile.  I was also heavily involved in customer research, requirements gathering, generating style guides, developing pitch decks, animation, program content production and in some cases leading small teams of designers.
+    aside#company-logos.small-images
+      figure
+        figcaption Here are just a few of the brands I worked with since 2005:
+      a(target='_blank', href='http://www.puma.com')
+        img(src='img/puma.png', title='Puma')
+      a(target='_blank', href='http://www.oprah.com/own')
+        img(src='img/own.png', title='Oprah Winphrey Network')
+      a(target='_blank', href='http://www.theartistscompany.com')
+        img(src='img/acompany.png', title='The Artists Company')
+      a(target='_blank', href='http://www.vmagazine.com/')
+        img(src='img/vmagazine.png', title='V Magazine')
+      a(target='_blank', href='http://tokyopop.com/')
+        img(src='img/tp.png', title='Tokyopop')
+      a(target='_blank', href='http://www.wga.org/')
+        img(src='img/wgaw.png', title="Writer's Guild of America West")
+      a(target='_blank', href='http://www.foxmovies.com/')
+        img(src='img/fox.png', title='20th Century Fox')
+      a(target='_blank', href='http://www.sothebys.com/en.html')
+        img(src='img/sothebys.png', title="Sotheby's International Realty")
+      a(target='_blank', href='http://www.badassembly.com')
+        img(src='img/ba.png', title='Bad Assembly')
+      a(target='_blank', href='http://dentistry.usc.edu/')
+        img(src='img/uscdentistry.png', title='USC School of Dentistry')
+      a(target='_blank', href='http://sevenly.org')
+        img(src='img/sevenly.png', title='Sevenly')
+      a(target='_blank', href='http://ssk.com/')
+        img(src='img/ssk.png', title='SS+K')
+      a(target='_blank', href='http://justinwine.com/')
+        | Justin Wines
+        img(src='img/justin.png', title='Justin Wines', alt='Justin Wines')
+      a(target='_blank', href='http://landmarkwine.com/')
+        | Landmark Vineyards
+        img(src='img/landmark.png', title='Landmark Vineyards', alt='Landmark Vineyards')
+
+      a(target='_blank', href='http://history.com/')
+        | History Channel
+        img(src='img/history.png', title='History.com', alt='History.com')
+
+      a(target='_blank', href='http://halos-fun.com/')
+        | Halos
+        img(src='img/halos.png', title='Halos', alt='Halos')
+
+  #dev-img
+  section.tone-2
+    h1#section2 Full Stack Developer
+    p From 2008 onward, I worked on building a major technology platform for AST, a multi-million dollar video startup that I helped co-found.  Over the 5 year period that we built out our technology platform, I was heavily involved in designing the system architecture, managing UX design, and implementing front-end UI across multiple devices.
+    figure
+      .img-div
+        img(src='img/ast-stb.png')
+      figcaption I designed and lead the team developing an embedded Linux set top box.
+    p Through this process I gained extensive hands on experience and deep understanding of multiple coding languages, popular development frameworks, scalable software design patterns, low level video technology, and specialized operating systems.
+    figure
+      figcaption Here are a few of the technologies I've mastered over the years:
+      aside#skills-tag-container(ng-controller='SkillsTagCtrl')
+        dl(ng-repeat='skills in skills.skills')
+          dt {{skills.name}}
+          dd(ng-repeat='lists in skills.list')
+            a(target='_blank', href='{{skills.list[$index].URL}}') {{skills.list[$index].name}}
+    p The platform I built transcodes massive volumes of HDTV source material into multi-bitrate HTTP Live Streaming delivered across multiple server and cloud platforms linked to a robust custom built content management system where international TV programmers can schedule shows to playout on channels, manage pricing for video on demand, and add or edit multi-language metadata.
+    figure
+      .img-div
+        img(src='img/cms.png')
+      figcaption A globally accessible dashboard to manage TV content rights in realtime.
+    p This back-end system connects to a TV set top box running on a software stack developed in house where users can channel flip through professionally created HDTV channels, view any and all content On Demand, and search or browse for thousands of titles.
+    figure
+      .img-div
+        img(src='img/ast-arch.png', alt='Scalable Service Oriented Architecture')
+      figcaption Simplified architecture diagram.
+    figure
+      video.vid-container(width='100%', height='100%', controls='', autoplay='autoplay', loop='true')
+        source(src='/ast-text-demo.mp4', type='video/mp4')
+        |                     Your browser does not support the video tag.
+      figcaption This is an early live demo of the first generation set top box platform.
+    p Due to rapid market changes we quickly transitioned in a matter of months to servicing multiple devices through a browser based UI sharing the same APIs and providing users with the same channel flipping and video on demand experience.
+    figure
+      .img-div
+        img#ast-stb(src='img/ast-lite.png')
+      figcaption e-mail me to get a trial login to the beta site. of the web version here:
+        a(target='_blank', href='http://beta.americanstandard.tv') beta.americanstandard.tv
+    p In this process we deployed prototype iOS apps as well as a fully working Android and iOS remote control for the TV service. Building this platform I directly recruited and managed 8 fulltime software developers.  I lead the design and implementation of multiple responsive single page web applications, iOS and Android touch interfaces, and several proprietary set top box platforms.
+    .img-div
+      img.img-fold(src='img/ipad-ast.png')
+      img.img-fold(src='img/iphone-ast-ui.png')
+      img.img-fold(src='img/iphone-ast-playing.png')
+    p As a software developer, I specialize in front end scripted languages, object oriented programming models, and building scalable single page web applications that conform to todays modern web standards.  Beyond building highly dynamic user interfaces, working with advanced web typography, and 2-way data binding, I also have a strong specialization in handling HD video, images, and metadata cross platform in global multi-language environments.
+  #product-img
+  section.tone-3
+    h1#section3 Product Lead
+    p As a founding technology entrepreneur, I scaled a team of 2 up to nearly 20 fulltime employees with 13 direct reports.  I directly managed software engineers with all levels of technical experience ranging from very senior Chief Architects to college students.  I lead graphic design teams and recruited and trained interns. I oversaw everything from major releases requiring custom hardware deployment to quick marketing site updates.  For two years I managed relationships with clients overseas in Japan and Korea and managed offshore software developers in Europe.
+    figure
+      figcaption Some of the people I've managed over the years:
+      aside#teampics
+        img(src='img/td.png', title='Sr. .Net Developer')
+        img(src='img/ff.png', title='CTO')
+        img(src='img/jk.png', title='Sr. Front End Developer + Designer')
+        img(src='img/jl.png', title='Customer Research Intern')
+        img(src='img/dh.png', title='Operations + Logistics')
+        img(src='img/mg.png', title='Jr. Front End Developer')
+        img(src='img/tl.png', title='Sr. DB Developer')
+        img(src='img/va.png', title='Sr. QA Lead')
+        img(src='img/mb.png', title='Sr. Network Architect')
+        img(src='img/rm.png', title='Sr. Linux Developer')
+        img(src='img/mh.png', title='Translator / Localization')
+        img(src='img/ag.png', title='Jr. Linux Developer')
+        img(src='img/sk.png', title='Jr. .Net Developer')
+        img(src='img/is.png', title='Jr. Designer')
+    p I’ve used most major project management tools ranging from Jira and Basecamp to Trello and MS Project. I build wireframes and design mock ups in the Adobe Creative Suite and have create both granular and high level documentation for projects ranging in length from days to years. I specialize in Agile development, but also love writing detailed up front specifications for larger projects and am equally as comfortable working in a 1 week release cycle as a 6 month release cycle as fits the project and team.
+    figure
+      figcaption Sample from product specifications prepared for a b2b client.
+      #functional-spec
+        img(src='img/fkp.png', alt='')
+        img(src='img/fkp2.png', alt='')
+        img(src='img/fkp3.png', alt='')
+        img(src='img/fkp4.png', alt='')
+        img(src='img/fkp5.png', alt='')
+        img(src='img/fkp6.png', alt='')
+        img(src='img/fkp7.png', alt='')
+        img(src='img/fkp8.png', alt='')
+        img(src='img/fkp9.png', alt='')
+    p As an entrepreneur I gained mission critical experience managing budgets and deadlines, estimating costs, and adapting to complex situations in a rapidly changing environment. Although follow through and maximizing product quality are always key goals, I also have learned the immeasurable value of adapting plans quickly to take advantage of natural efficiencies and adding constraints to a project scope to achieve the highest value results.  As a hands on developer and participating in the architecture process, I can much more accurately estimate project timelines and resource requirements, evaluate team performance, and identify where negotiating a small change to a specification can result in huge cost savings.
+  section#milestones
+    h1 Milestones Along the Way
+    aside
+      ul#done-list
+        li Wrote provisional patent for a p2p system
+        li Built initial hardware and software proof of concept that raised $1 million
+        li Regularly attend global media and technology conferences such as CES, NAB, Digital Hollywood, TIFFCOM, etc.
+        li Regularly visit technology contacts and partners in Silicon Valley, NYC, Tokyo, Seattle
+        li Regularly managed relationships with C-Level executives, business owners, and high net worth individuals.
+        li Wrote product specifications for dedicated IPTV set top box
+        li Wrote functional specifications for custom CMS / Digital Asset Management system
+        li Wrote video encoding and storage best practices and standards speficifactions for multi-region, multi-resolution, multi-language assets
+        li Wrote functional specifications and project plan for Web Browser multi-channel TV platform
+        li Wrote requirements, scheduled and executed over 23 consecutive 2 week Agile sprints
+        li Continually sourced requirements from internal business development executives, 3rd Party licensing vendors, niche consumer groups across multiple demographics through market research and a/b testing, and traveled to meet with content suppliers at trade shows in Tokyo.
+
+  footer
+    address
+      p DUSTIN JOHNSON
+      p 805.570.7813
+      p Downtown Little Tokyo / Arts District, Los Angeles, CA
+    #back-btn
+      a(href='#/') back to top
