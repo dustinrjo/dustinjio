@@ -26,11 +26,61 @@ block content
       li: a#productbtn.nav-button(href='#/product') PRODUCT LEAD
 
   section.tone-1
-    h1#section1 Interactive Design
-    p After studying interactive graphic design and new media theory through the SBCC SOMA program and USC's Institute of Multimedia Literacy program I became a design specialist consulting for digital media projects.  Across these projects I specialized in interactive design, page layout, templating, and typography for web, print, and mobile.  I was also heavily involved in customer research, requirements gathering, generating style guides, developing pitch decks, animation, program content production and in some cases leading small teams of designers.
+    h1#section1 I am a full stack interactive developer with a background in design.  I've lead teams, worked on teams, and flown solo many times.  I've been brought in to maintain legacy systems and I've architected large projects from scratch. If you're looking for someone with range, you've come to the right place.
+    h2 I also specialize in a few things:
+
+    section.tone-3
+
+      article
+        h3 E-commerce
+        .description I've built several e-commerce solutions ranging from Shopify sites to fully custom NodeJS and Stripe implementations.
+
+      article
+        h3 WebGL and Games
+        .description Last year I worked on several interactive pieces for A&E Networks and built an expirimental WebGL holiday project with ThreeJS.
+
+      article
+        h3 Television and Video
+        .description Shopify, wines, custom stripe implementations, content production full range etc.
+
+      article
+        h3 Internationalization / Localization / International Projects
+        .description Shopify, wines, custom stripe implementations, content production full range etc.
+
+      article
+        h3 Publishing and Ad Supported Media
+        .description Shopify, wines, custom stripe implementations, content production full range etc.
+
+      article
+        h3 Finance and Economics
+        .description Shopify, wines, custom stripe implementations, content production full range etc.
+
+
+
+    figure
+      figcaption Here's a snapshot of skills I've gained over the years
+      aside#skills-tag-container(ng-controller='SkillsTagCtrl')
+        dl(ng-repeat='skills in skills.skills')
+          dt {{skills.name}}
+          dd(ng-repeat='item in skills.list')
+            a(target='_blank', ng-href='{{item.URL}}') {{item.name}}
+
+    h3 You can follow up here to see a few [cite maybe]
+      a(href="https://coderwall.com/dustinrjo")  protips
+      |  and
+      a(href="http://github.com")  gists
+      |  of my code, including the full source to this (aka @) site.
+
+
+  section.tone-2
+    h2 TLDR;
+    p I started out as a video game hacker & hobbyist in the 90's and went on to officially study interactive design and new media theory through the SBCC SOMA program and USC's Institute of Multimedia Literacy program.
+
+    p Over the past 10 years I've been hired by dozens of companies as a contract designer, animator, developer, and project lead.
+
     aside#company-logos.small-images
       figure
-        figcaption Here are just a few of the brands I worked with since 2005:
+        figcaption Here are just a few of the brands I've worked with since 2005:
       a(target='_blank', href='http://www.puma.com')
         img(src='img/puma.png', title='Puma')
       a(target='_blank', href='http://www.oprah.com/own')
@@ -70,22 +120,21 @@ block content
         | Halos
         img(src='img/halos.png', title='Halos', alt='Halos')
 
-  #dev-img
+
+
   section.tone-2
-    h1#section2 Full Stack Developer
-    p From 2008 onward, I worked on building a major technology platform for AST, a multi-million dollar video startup that I helped co-found.  Over the 5 year period that we built out our technology platform, I was heavily involved in designing the system architecture, managing UX design, and implementing front-end UI across multiple devices.
+    h2#section2 In 2008 I took a dive into startups and lead a multi-million dollar team
+    p From 2008 to 2012, I worked on building a major technology platform for AST, a multi-million dollar video startup that I helped co-found.  Over the 4 year period that we built out our technology platform, I was heavily involved in designing the system architecture, managing UX design, and implementing front-end UI across multiple devices.
     figure
       .img-div
         img(src='img/ast-stb.png')
-      figcaption I designed and lead the team developing an embedded Linux set top box.
+      figcaption I assembled and lead the team developing an embedded Linux set top box.
+
+
     p Through this process I gained extensive hands on experience and deep understanding of multiple coding languages, popular development frameworks, scalable software design patterns, low level video technology, and specialized operating systems.
-    figure
-      figcaption Here are a few of the technologies I've mastered over the years:
-      aside#skills-tag-container(ng-controller='SkillsTagCtrl')
-        dl(ng-repeat='skills in skills.skills')
-          dt {{skills.name}}
-          dd(ng-repeat='lists in skills.list')
-            a(target='_blank', href='{{skills.list[$index].URL}}') {{skills.list[$index].name}}
+
+
+
     p The platform I built transcodes massive volumes of HDTV source material into multi-bitrate HTTP Live Streaming delivered across multiple server and cloud platforms linked to a robust custom built content management system where international TV programmers can schedule shows to playout on channels, manage pricing for video on demand, and add or edit multi-language metadata.
     figure
       .img-div
@@ -113,9 +162,10 @@ block content
       img.img-fold(src='img/iphone-ast-ui.png')
       img.img-fold(src='img/iphone-ast-playing.png')
     p As a software developer, I specialize in front end scripted languages, object oriented programming models, and building scalable single page web applications that conform to todays modern web standards.  Beyond building highly dynamic user interfaces, working with advanced web typography, and 2-way data binding, I also have a strong specialization in handling HD video, images, and metadata cross platform in global multi-language environments.
+  #dev-img
   #product-img
   section.tone-3
-    h1#section3 Product Lead
+    h1#section3 Project Lead
     p As a founding technology entrepreneur, I scaled a team of 2 up to nearly 20 fulltime employees with 13 direct reports.  I directly managed software engineers with all levels of technical experience ranging from very senior Chief Architects to college students.  I lead graphic design teams and recruited and trained interns. I oversaw everything from major releases requiring custom hardware deployment to quick marketing site updates.  For two years I managed relationships with clients overseas in Japan and Korea and managed offshore software developers in Europe.
     figure
       figcaption Some of the people I've managed over the years:
@@ -134,7 +184,7 @@ block content
         img(src='img/ag.png', title='Jr. Linux Developer')
         img(src='img/sk.png', title='Jr. .Net Developer')
         img(src='img/is.png', title='Jr. Designer')
-    p I’ve used most major project management tools ranging from Jira and Basecamp to Trello and MS Project. I build wireframes and design mock ups in the Adobe Creative Suite and have create both granular and high level documentation for projects ranging in length from days to years. I specialize in Agile development, but also love writing detailed up front specifications for larger projects and am equally as comfortable working in a 1 week release cycle as a 6 month release cycle as fits the project and team.
+    p I’ve used most major project management tools ranging from Jira and Basecamp to Trello and MS Project. I build wireframes and design mock ups in the Adobe Creative Suite and have created both granular and high level documentation for projects ranging in length from days to years. I specialize in iterative development with short release cycles, but also jump at the opportunity to create painstakingly wellcrafted up front specifications for larger projects.
     figure
       figcaption Sample from product specifications prepared for a b2b client.
       #functional-spec
@@ -163,6 +213,45 @@ block content
         li Wrote functional specifications and project plan for Web Browser multi-channel TV platform
         li Wrote requirements, scheduled and executed over 23 consecutive 2 week Agile sprints
         li Continually sourced requirements from internal business development executives, 3rd Party licensing vendors, niche consumer groups across multiple demographics through market research and a/b testing, and traveled to meet with content suppliers at trade shows in Tokyo.
+
+  section.todos
+
+    li
+      | mention agency client relationship experience
+
+    li
+      | mention why python came into play
+
+    li
+      | mention the bamf stack and where you could read more
+
+    li
+      | mention the webgl thing and where you can see more
+
+    li
+      | throw up some gists on github
+
+    li
+      | include some comps from JUSTIN
+
+    li
+      | talk about CMS experience / emphasis on the nth page
+
+    li
+      | talk about the ADN project but cloak it with NDA style language
+
+    li
+      | insert some code and fancy format it inside the <code>code</code> element
+
+    li
+      | add ascii art to the console and the minified javascipt
+
+    li
+      | hook up browserify and minify that javascript
+
+    li
+      | maybe use VUE instead of AngularJS or maybe react since it's popular
+
 
   footer
     address
