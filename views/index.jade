@@ -3,6 +3,7 @@ extends layout
 block content
 
   header#header
+
     .logo-box
       img.headshot(src='img/dustin.png', alt='Dustin Johnson, Web Developer')
       .main-title DUSTIN JOHNSON
@@ -25,11 +26,13 @@ block content
       li: a#devbtn.nav-button(href='#/developer') DEVELOPER
       li: a#productbtn.nav-button(href='#/product') PRODUCT LEAD
 
-  section.tone-1
-    h1#section1 I am a full stack interactive developer with a background in design.  I've lead teams, worked on teams, and flown solo many times.  I've been brought in to maintain legacy systems and I've architected large projects from scratch. If you're looking for someone with range, you've come to the right place.
+  section.intro
+    h1 I am a full stack interactive developer with a background in design.  I've lead teams, worked on teams, and flown solo many times.  I've been brought in to maintain legacy systems and I've architected large projects from scratch. If you're looking for someone with range, you've come to the right place.
+
+  section
     h2 I also specialize in a few things:
 
-    section.tone-3
+    .grid
 
       article
         h3 E-commerce
@@ -37,25 +40,31 @@ block content
 
       article
         h3 WebGL and Games
-        .description Last year I worked on several interactive pieces for A&E Networks and built an expirimental WebGL holiday project with ThreeJS.
+        .description Last year I worked on several interactive pieces for A&E Networks and built an expirimental <a href="http://holiday2014.badassembly.com", target="blank">WebGL holiday project</a> with <a href="http://threejs.org", target="_blank">ThreeJS</a>.
 
       article
         h3 Television and Video
-        .description Shopify, wines, custom stripe implementations, content production full range etc.
+        .description In 2008 I co-founded an international television startup company delivering HDTV in mulitple languages to web browsers, set top boxes and mobile devices.
 
       article
         h3 Internationalization / Localization / International Projects
-        .description Shopify, wines, custom stripe implementations, content production full range etc.
+        .description Several of my projects have required i18n for database driven content management systems as well as front end development and design.
 
       article
         h3 Publishing and Ad Supported Media
-        .description Shopify, wines, custom stripe implementations, content production full range etc.
+        .description Familiar with high traffic websites with large content databases I've migrated clients to AWS and Cloudfront and created caching routines to optimize for millions of pageviews.
 
       article
         h3 Finance and Economics
-        .description Shopify, wines, custom stripe implementations, content production full range etc.
+        .description Not really your first thought for a developer, but I'm a finance nerd and economics hobbyist, something that comes in handy when managing teams and designing products and corporate strategy.
+
+      article
+        h3 Cloud Computing and Scalable Systems
+        .description Tasked with building a multi-channel tv platform, deploying staging environments for existing sites, and handling 1000x traffic spikes for viral content, I'm well versed with programatic approaches to EC2, Azure, Heroku, S3, Cloudfront, andothers.
 
 
+  #dev-img
+  section
 
     figure
       figcaption Here's a snapshot of skills I've gained over the years
@@ -65,7 +74,7 @@ block content
           dd(ng-repeat='item in skills.list')
             a(target='_blank', ng-href='{{item.URL}}') {{item.name}}
 
-    h3 You can follow up here to see a few [cite maybe]
+    cite You can follow up here to see a few
       a(href="https://coderwall.com/dustinrjo")  protips
       |  and
       a(href="http://github.com")  gists
@@ -73,7 +82,7 @@ block content
 
 
   section.tone-2
-    h2 TLDR;
+    h2 TL;DR
     p I started out as a video game hacker & hobbyist in the 90's and went on to officially study interactive design and new media theory through the SBCC SOMA program and USC's Institute of Multimedia Literacy program.
 
     p Over the past 10 years I've been hired by dozens of companies as a contract designer, animator, developer, and project lead.
@@ -106,41 +115,37 @@ block content
       a(target='_blank', href='http://ssk.com/')
         img(src='img/ssk.png', title='SS+K')
       a(target='_blank', href='http://justinwine.com/')
-        | Justin Wines
         img(src='img/justin.png', title='Justin Wines', alt='Justin Wines')
       a(target='_blank', href='http://landmarkwine.com/')
-        | Landmark Vineyards
         img(src='img/landmark.png', title='Landmark Vineyards', alt='Landmark Vineyards')
-
       a(target='_blank', href='http://history.com/')
-        | History Channel
         img(src='img/history.png', title='History.com', alt='History.com')
-
       a(target='_blank', href='http://halos-fun.com/')
-        | Halos
         img(src='img/halos.png', title='Halos', alt='Halos')
 
 
-
   section.tone-2
-    h2#section2 In 2008 I took a dive into startups and lead a multi-million dollar team
-    p From 2008 to 2012, I worked on building a major technology platform for AST, a multi-million dollar video startup that I helped co-found.  Over the 4 year period that we built out our technology platform, I was heavily involved in designing the system architecture, managing UX design, and implementing front-end UI across multiple devices.
+
+    h2#section2 In 2008 I took a dive into startups
+
+    p From 2008 to 2012, I worked on building a large technology platform for AST, a multi-million dollar video startup that I helped co-found.  Over the 4 year period that we built out our product, I lead the system architecture, managed user experience, and oversaw the implementation of front end user interfaces across multiple browsers and native apps for embedded devices.  Building this platform I directly recruited and managed 8 fulltime software developers.
+
     figure
       .img-div
         img(src='img/ast-stb.png')
       figcaption I assembled and lead the team developing an embedded Linux set top box.
 
+    p Throughout this process I gained extensive experience working with video transcoding, embedded systems, distributed computing, and content schema design.
 
-    p Through this process I gained extensive hands on experience and deep understanding of multiple coding languages, popular development frameworks, scalable software design patterns, low level video technology, and specialized operating systems.
+    p The platform I built transcodes massive volumes of HDTV source material into multi-bitrate HTTP Live Streaming delivered across multiple server and cloud platforms linked to a custom built content management system where international TV programmers can schedule shows to playout on channels, manage pricing for video on demand, and CRUD multi-language metadata.
 
-
-
-    p The platform I built transcodes massive volumes of HDTV source material into multi-bitrate HTTP Live Streaming delivered across multiple server and cloud platforms linked to a robust custom built content management system where international TV programmers can schedule shows to playout on channels, manage pricing for video on demand, and add or edit multi-language metadata.
     figure
       .img-div
         img(src='img/cms.png')
       figcaption A globally accessible dashboard to manage TV content rights in realtime.
-    p This back-end system connects to a TV set top box running on a software stack developed in house where users can channel flip through professionally created HDTV channels, view any and all content On Demand, and search or browse for thousands of titles.
+
+    p This back end system connects to a TV set top box running on a software stack developed in house where users can channel flip through professionally created HDTV channels, view any and all content On Demand, and search or browse for thousands of titles.
+
     figure
       .img-div
         img(src='img/ast-arch.png', alt='Scalable Service Oriented Architecture')
@@ -150,19 +155,20 @@ block content
         source(src='/ast-text-demo.mp4', type='video/mp4')
         |                     Your browser does not support the video tag.
       figcaption This is an early live demo of the first generation set top box platform.
-    p Due to rapid market changes we quickly transitioned in a matter of months to servicing multiple devices through a browser based UI sharing the same APIs and providing users with the same channel flipping and video on demand experience.
+    p When browser video technology started catching up to native apps, we quickly transitioned our front end to servicing multiple devices through a browser based UI sharing the same JSON APIs and providing users with the same channel flipping and video on demand experience.
     figure
       .img-div
         img#ast-stb(src='img/ast-lite.png')
-      figcaption e-mail me to get a trial login to the beta site. of the web version here:
-        a(target='_blank', href='http://beta.americanstandard.tv') beta.americanstandard.tv
-    p In this process we deployed prototype iOS apps as well as a fully working Android and iOS remote control for the TV service. Building this platform I directly recruited and managed 8 fulltime software developers.  I lead the design and implementation of multiple responsive single page web applications, iOS and Android touch interfaces, and several proprietary set top box platforms.
+      figcaption e-mail me to get a trial login to the beta site. of the web version here:&nbsp
+        a(target='_blank', href='http://americanstandard.tv') beta.americanstandard.tv
+    p In this process we deployed prototype iOS apps as well as a fully working Android and iOS remote control for the TV service.
     .img-div
       img.img-fold(src='img/ipad-ast.png')
       img.img-fold(src='img/iphone-ast-ui.png')
       img.img-fold(src='img/iphone-ast-playing.png')
-    p As a software developer, I specialize in front end scripted languages, object oriented programming models, and building scalable single page web applications that conform to todays modern web standards.  Beyond building highly dynamic user interfaces, working with advanced web typography, and 2-way data binding, I also have a strong specialization in handling HD video, images, and metadata cross platform in global multi-language environments.
-  #dev-img
+    p I lead the design and implementation of multiple responsive single page web applications, iOS and Android touch interfaces, and several proprietary set top box platforms.
+
+
   #product-img
   section.tone-3
     h1#section3 Project Lead
@@ -241,16 +247,35 @@ block content
       | talk about the ADN project but cloak it with NDA style language
 
     li
-      | insert some code and fancy format it inside the <code>code</code> element
-
-    li
       | add ascii art to the console and the minified javascipt
 
     li
-      | hook up browserify and minify that javascript
+      | make sure that javascript is minified and gzipped!
 
     li
-      | maybe use VUE instead of AngularJS or maybe react since it's popular
+      | maybe use VUE instead of AngularJS or maybe react since it's popular, or use roots' build in yaml compiler
+
+    li
+      | setup google analytics
+
+    li
+      | new nav plz!
+
+
+  section#recently
+    h2 Recently I've worked on agency projects
+    p This has been a great way to refine my build process, which I wrote about here, and get up to date on the capabilities and workflows of the latest web technoligies like this WebGl project.
+    p One of the larger projects included a pair of next-gen AngularJS and Wordpress driven ecommerce website for two legendary wineries that I write about here.
+    p In addition to that I play an advisory role in two e-commerce startups.
+
+  section.work
+    h2 I recently built BadAssembly.com and won an award SOTD and featured in numerous publications across the web.
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque aspernatur aperiam ea aut quos cupiditate vel autem. Beatae, distinctio doloremque soluta in cumque nostrum id magnam error sed sint corporis sit eaque natus provident facilis, dicta placeat temporibus. In nemo, iure soluta? Vero sint amet quasi cum, assumenda exercitationem!
+    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque aspernatur aperiam ea aut quos cupiditate vel autem. Beatae, distinctio doloremque soluta in cumque nostrum id magnam error sed sint corporis sit eaque natus provident facilis, dicta placeat temporibus. In nemo, iure soluta? Vero sint amet quasi cum, assumenda exercitationem!
+
+  section.art
+    h2 I have a passion for photography and art
+    p insert art image grid here
 
 
   footer
