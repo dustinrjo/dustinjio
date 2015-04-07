@@ -33,17 +33,25 @@ html, body
   text-align center
   margin-top 3em
 
+
+
+
 #code, #recently
-  padding-top 4.5em
+  padding-top 3em
 
 
 #code
 
+  padding-bottom 6em
 
   cite
     margin auto
+    margin-top 2rem
     display block
     text-align center
+    a
+      font-style normal
+    // color light-grey
 
 
 nav.social
@@ -89,6 +97,8 @@ nav.social
 #agency-img
 #dev-img
 #product-img
+#backstory-img
+#milestones-img
   width 100%
   min-height 200px
   background-position center
@@ -103,6 +113,13 @@ nav.social
 
 #agency-img
   background-image url("../img/agency.jpg")
+
+#backstory-img
+  opacity .8
+  background-image url("../img/bg/backstory-2-bg.jpg")
+
+#milestones-img
+  background-image url("../img/bg/milestones-bg.jpg")
 
 
 
@@ -183,20 +200,20 @@ nav.social
 figcaption
   text-align center
   font-weight 300
-  margin-bottom 1.5em
+  font-family 'lato'
+  font-weight 700
+  margin 0rem auto 2rem auto
+  font-size .85rem
+
 
 #done-list
   padding 0em
   max-width 760px
   margin auto
-  padding 1.5em 0em 2em 2em
-  padding 1.5em 0em 2em 2em
-  padding 1.5em 0em 2em 2em
+
+  padding 0em 0em 2em 2em
   li
     margin 1em 0em
-    margin 1em
-    margin 1em
-    margin 1em
     &:before
       content "\e606"
       font-family 'icomoon'

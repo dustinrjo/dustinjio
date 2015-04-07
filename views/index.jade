@@ -25,7 +25,7 @@ block content
 
   section
     .center-constrained
-      h2 Areas of Specialization
+      h3 Areas of Specialization
 
       .grid
 
@@ -64,7 +64,7 @@ block content
 
   section#code
     figure
-      figcaption: h3 Here's a snapshot of skills I've gained over the years
+      figcaption: h3 Skills I've Gained Over the Years
       #skills-tag-container(ng-controller='SkillsTagCtrl').center-constrained
         dl(ng-repeat='skills in skills.skills')
           dt {{skills.name}}
@@ -78,8 +78,10 @@ block content
       |  of my code, including the full source to this site.
 
 
+  #backstory-img
+
   section#design
-    h2 And here's the TL;DR
+    h2 The Backstory
     p I started out as a video game hacker & hobbyist in the 90's and went on to officially study interactive design and new media theory through the SBCC SOMA program and USC's Institute of Multimedia Literacy program.
 
     p#clients Over the past 10 years I've been hired by dozens of companies as a contract designer, animator, developer, and project lead.
@@ -127,16 +129,21 @@ block content
 
   section#startup
 
-    h2 In 2008 I took a dive into startups
+    h2 The Dive Into Startups
 
     p From 2008 to 2012, I worked on building a large technology platform for AST, a multi-million dollar video startup that I helped co-found.  Over the 4 year period that we built out our product, I lead the system architecture, managed user experience, and oversaw the implementation of front end user interfaces across multiple browsers and native apps for embedded devices.  Building this platform I directly recruited and managed 8 fulltime software developers and numerous contractors.
 
     figure
       .img-div
         img(src='img/ast-stb.png')
-      figcaption I assembled and lead the team developing an embedded Linux set top box.
+      //- figcaption I assembled and lead the team developing an embedded Linux set top box.
 
-    p Throughout this process I gained extensive experience working with video transcoding, embedded systems, distributed computing, and RDB schema design for content metadata.
+    p I assembled and lead the team developing an embedded Linux set top box. Throughout this process I gained extensive experience working with video transcoding, embedded systems, distributed computing, and RDB schema design for content metadata.
+
+    figure#architecture-diagram
+      figcaption Simplified architecture diagram.
+      .img-div
+        img(src='img/ast-arch.png', alt='Scalable Service Oriented Architecture')
 
     p The platform I built transcodes massive volumes of HDTV source material into multi-bitrate HTTP Live Streaming delivered across multiple server and cloud platforms linked to a custom built content management system where international TV programmers can schedule shows to play out on channels, manage pricing for video on demand, and maintain multi-language metadata.
 
@@ -148,10 +155,6 @@ block content
     p This back end system connects to a TV set top box running on a software stack developed in house where users can channel flip through professionally created HDTV channels, view any and all content On Demand, and search or browse for thousands of titles.
 
     figure
-      .img-div
-        img(src='img/ast-arch.png', alt='Scalable Service Oriented Architecture')
-      figcaption Simplified architecture diagram.
-    figure
       video.vid-container(width='100%', height='100%', controls='', autoplay='autoplay', loop='true')
         source(src='/ast-text-demo.mp4', type='video/mp4')
         |                     Your browser does not support the video tag.
@@ -160,7 +163,7 @@ block content
     figure
       .img-div
         img#ast-stb(src='img/ast-lite.png')
-      figcaption e-mail me to get a trial login to the beta site. of the web version here:&nbsp
+      //- figcaption e-mail me to get a trial login to the beta site. of the web version here:&nbsp
         a(target='_blank', href='http://americanstandard.tv') beta.americanstandard.tv
     p In this process we deployed prototype iOS apps as well as fully functional Android and iOS remote controls for the TV service.
     .img-div
@@ -172,7 +175,7 @@ block content
 
   #product-img
   section#teams
-    h2 Project Lead
+    h2 Leading Teams
     p As a founding technology entrepreneur, I scaled a team of 2 up to nearly 20 fulltime employees with 13 direct reports.  I directly managed software engineers with all levels of technical experience ranging from very senior Chief Architects to college students.  I lead graphic design teams and recruited and trained interns. I oversaw everything from major releases requiring custom hardware deployment to quick marketing site updates.  For two years I managed relationships with clients overseas in Japan and Korea and managed offshore software developers in Europe.
     figure
       figcaption Some of the people I've managed over the years:
@@ -206,6 +209,7 @@ block content
         img(src='img/fkp8.png', alt='')
         img(src='img/fkp9.png', alt='')
     p As an entrepreneur I gained mission critical experience managing budgets and deadlines, estimating costs, and adapting to complex situations in a rapidly changing environment. Although follow through and maximizing product quality are always key goals, I also have learned the immeasurable value of adapting plans quickly to take advantage of natural efficiencies and adding constraints to a project scope to achieve the highest value results.  As a hands on developer and participating in the architecture process, I can much more accurately estimate project timelines and resource requirements, evaluate team performance, and identify where negotiating a small change to a specification can result in huge cost savings.
+  #milestones-img
   section#milestones
     h2 Milestones Along the Way
     aside
@@ -224,21 +228,27 @@ block content
 
 
   #agency-img
-  section#recently
-    h2 Recently I've worked on agency projects
+  section#agency
+    h2 Recent Agency Experience
     p This has been a great way to refine my build process, which I've written about #[a(href="https://medium.com/@ilimperium/a-deep-dive-into-modern-web-development-process-and-tools-e0824fc2447d", target="_blank") here], and get up to date on the capabilities and workflows of the latest web technoligies like #[a(href="#webgl") this WebGl project].
     p One of the larger projects included a pair of next-gen AngularJS and Wordpress driven ecommerce website for two legendary wineries that I've written about #[a(href="#wineries") here].
-    //- p In addition to that I play an advisory role in two e-commerce startups.
+    //- p In addition to that I play an advisory role in two e-commerce startups
 
-  section.work#agency
+    h3 Lead Development on Badassembly.com
 
 
-    h3 I recently lead development on BadAssembly.com.
-    p: img(src="img/badass-desktop.png").full-bleed
-    h3 The site won both Awwwards SOTD and a Microsoft Developer Award.
-    p: img(src="img/ms-developer-award.svg").dev-award
-    p: img(src="img/awwwards-logo.svg").awwward
-    p The site has been featured in numerous publications across the web.
+    p
+      img.full-bleed(src="img/badass-desktop.png")
+
+    //- h4.awards The site won both Awwwards SOTD and a Microsoft Developer Award.
+
+    figure.awards
+      figcaption The site won both Awwwards SOTD and a Microsoft Developer Award.
+      img(src="img/ms-developer-award.svg").dev-award
+      img(src="img/awwwards-logo.svg").awwward
+
+
+    p The site has been featured in numerous publications across the web, everywhere from France to Hong Kong, Russia to Brazil.
     p: img(src="img/badassembly-flat-chrome.png").full-bleed
 
     p This site is deployed on Heroku using a Rails pipeline centered around CoffeeScript, Sass, and integrating some existing components in BackboneJS with Marionette.
@@ -254,19 +264,14 @@ block content
     p: img.full-bleed(src="/img/webgl-santa-dancing.jpg")
     p This project has it all.  Its responsive, it employs the web audio api for live waveforms, it stretches browser performance with ThreeJS, gracefully degrades on lesser devices when possible, and even implements a custom animated SVG preloader.  It did not make the production version but in development it also employed free flying with collission detection and on iPad supported gestural controls.
     p: img.full-bleed(src="/img/webgl-santa-previs.jpg")
-    p
-      img(src="/img/webgl-santa-previs-2.jpg")
-      img(src="/img/webgl-santa-previs-3.jpg")
+    //- p
+    //-   img(src="/img/webgl-santa-previs-2.jpg")
+    //-   img(src="/img/webgl-santa-previs-3.jpg")
     p The site is deployed on S3 and Heroku free tier so forgive the fact that it can take a tick to load as the instances spin up.
     p: a.link(href="http://holiday2014.badassembly.com")
 
     h3#wineries Justin Wine & Landmark Vineyards
     p: img.full-bleed(src="/img/JUSTIN-on-desk.jpg")
-    figure.justin-wine
-      img.iphone(src="/img/justin-iphone.png")
-      img.tablet(src="/img/justin-ipad-portrait.png")
-      //- img.ibm(src="/img/justin-2009-ibm.png")
-      figcaption Responsive and IE8 compatible.
     p Sales for both of these multi-million dollar wineries are run through e-commerce sites that I built with one other developer at Bad Assembly.
     p At the client's request we used Wordpress as a CMS but opted to implement both sites as single page web applications through custom extensions to emerging JSON api's for wordpress.
     //- p: h1(style="color: red;") insert Landmark screenshots
@@ -275,6 +280,11 @@ block content
     p Both sites are managed through Git deployment across dev, staging, and production environments and are pre-compiled from Coffeescript and Stylus using Brunch in conjunction with Gulp for a secondary build to support all the way back to IE8 with Blessed CSS.
     p: img.ibm(src="/img/justin-2009-ibm.png")
     p AngularJS drives the front end of these sites and all of the content is managed through Advanced Custom Fields in wordpress using a block system we developed to allow the client to create an infinite number of combinations of different layouts using a very flexible grid built on Jeet with some customization for IE8.
+    figure.justin-wine
+      figcaption Responsive and IE8 compatible.
+      img.iphone(src="/img/justin-iphone.png")
+      img.tablet(src="/img/justin-ipad-portrait.png")
+      //- img.ibm(src="/img/justin-2009-ibm.png")
     p While this build process is not ideal for every kind of site, it was an excellent solution to both support the Wordpress CMS requirement and the extreme flexibility the client designs demanded.
 
     h3 Halos Mandarin Oranges
@@ -346,7 +356,7 @@ block content
     .image-grid
       figure.two-third
         img(src="/img/gallery/california-oak.jpg")
-        figcaption Old California
+        figcaption Real California
 
       figure.third
         img(src="/img/gallery/ranch-portrait.jpg")
@@ -357,7 +367,7 @@ block content
 
       figure.full
         img(src="/img/gallery/tokyo-night.jpg")
-        figcaption Japan Future City
+        figcaption Future City
 
     .image-grid
 
@@ -445,8 +455,8 @@ block content
     //- li make sure that javascript is minified and gzipped!
     //- li fix the typos
     //- li update all the anchor links throughout the page (maybe re-implement scrollTo)
-    li lock down 12 column grid and or centering rules
-    li lock down the typography rules
+    //- li lock down 12 column grid and or centering rules
+    //- li lock down the typography rules
     li fix responsive for tablet and mobile
     li deploy to github publicly and add the link to the project
     li deploy the project
@@ -461,5 +471,5 @@ block content
       p DUSTIN JOHNSON
       p 805.570.7813
       p Downtown Little Tokyo / Arts District, Los Angeles, CA
-    #back-btn
-      a(href='#/') back to top
+    //- #back-btn
+    //-   a(href='#/') back to top
