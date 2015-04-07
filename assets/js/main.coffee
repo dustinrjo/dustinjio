@@ -377,10 +377,6 @@ app.controller 'SkillsTagCtrl', [
             'URL': 'https://developer.apple.com/xcode/'
           }
           {
-            'name': 'PhantomJS'
-            'URL': 'http://phantomjs.org/'
-          }
-          {
             'name': 'Powershell'
             'URL': 'http://en.wikipedia.org/wiki/Windows_PowerShell'
           }
@@ -416,6 +412,10 @@ app.controller 'SkillsTagCtrl', [
           {
             'name': 'Karma'
             'URL': 'http://karma-runner.github.io/'
+          }
+          {
+            'name': 'PhantomJS'
+            'URL': 'http://phantomjs.org/'
           }
           {
             'name': '.NET'

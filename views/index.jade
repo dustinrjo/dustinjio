@@ -2,91 +2,70 @@ extends layout
 
 block content
 
-  //- nav.social
-  //-   ul
-  //-     li: a.icon-tumblr(target='_blank', href='http://ilimperium.tumblr.com')
-  //-     li: a.icon-linkedin(target='_blank', href='http://www.linkedin.com/in/dustinrjo')
-  //-     li: a.icon-twitter(target='_blank', href='http://twitter.com/ilimperium')
-  //-     li: a.icon-github(target='_blank', href='http://github.com/dustinrjo')
-  //-     li: a.icon-behance(target='_blank', href='http://www.behance.net/dustinj')
-  //-     li: a.icon-feather(target='_blank', href='https://medium.com/@ilimperium')
-  //-     li: a.icon-text-document(href='/DRJCV.pdf')
-  //-     li: a.icon-location-pin(target='_blank', href='http://goo.gl/maps/GZK2b')
-  //-     li: a.icon-mail(href='mailto:me@dustinj.io')
-  //-     li: a.icon-code(target='_blank', href='https://coderwall.com/dustinrjo')
-  //-     li.telephone: a.icon-phone(href='tel:8055707813')
-
-  header#header
-
-    .logo-box
-      img.headshot(src='img/dustin.png', alt='Dustin Johnson, Web Developer')
-      //- .main-title DUSTIN JOHNSON
-
-
+  header
+    img.headshot(src='img/dustin.png', alt='Dustin Johnson, Web Developer')
 
   section.intro
     h1 Hello, I am a <a href="#code">full stack</a> interactive developer with a background in <a href="#design">design</a>.  I've <a href="#teams">lead teams</a>, worked for <a href="#agency">award winning agencies</a>, and <a href="#clients">flown solo</a> many times.  I've been brought in to maintain legacy systems and I've <a href="#startup">architected large projects</a> from scratch. If you're looking for someone with range, I'm your huckleberry.
 
-    nav.social-2
-      ul
-        li: a.icon-tumblr(target='_blank', href='http://ilimperium.tumblr.com')
-        li: a.icon-linkedin(target='_blank', href='http://www.linkedin.com/in/dustinrjo')
-        li: a.icon-twitter(target='_blank', href='http://twitter.com/ilimperium')
-        li: a.icon-github(target='_blank', href='http://github.com/dustinrjo')
-        li: a.icon-behance(target='_blank', href='http://www.behance.net/dustinj')
-        li: a.icon-feather(target='_blank', href='https://medium.com/@ilimperium')
-        li: a.icon-text-document(target='_blank', href='/DJCV.pdf')
-        li: a.icon-location-pin(target='_blank', href='http://goo.gl/maps/GZK2b')
-        li: a.icon-mail(href='mailto:me@dustinj.io')
-        li: a.icon-code(target='_blank', href='https://coderwall.com/dustinrjo')
-        li.telephone: a.icon-phone(href='tel:8055707813')
-
-    //- ul#nav-btns
-    //-   li: a#designbtn.nav-button(href='#/designer') DESIGNER
-    //-   li: a#devbtn.nav-button(href='#/developer') DEVELOPER
-    //-   li: a#productbtn.nav-button(href='#/product') PRODUCT LEAD
+  nav.social
+    ul
+      li: a.icon-tumblr(target='_blank', href='http://ilimperium.tumblr.com')
+      li: a.icon-linkedin(target='_blank', href='http://www.linkedin.com/in/dustinrjo')
+      li: a.icon-twitter(target='_blank', href='http://twitter.com/ilimperium')
+      li: a.icon-github(target='_blank', href='http://github.com/dustinrjo')
+      li: a.icon-behance(target='_blank', href='http://www.behance.net/dustinj')
+      li: a.icon-feather(target='_blank', href='https://medium.com/@ilimperium')
+      li: a.icon-text-document(target='_blank', href='/DJCV.pdf')
+      li: a.icon-location-pin(target='_blank', href='http://goo.gl/maps/GZK2b')
+      li: a.icon-mail(href='mailto:me@dustinj.io')
+      li: a.icon-code(target='_blank', href='https://coderwall.com/dustinrjo')
+      li.telephone: a.icon-phone(href='tel:8055707813')
 
 
   section
-    h2 I also specialize in a few things:
+    .center-constrained
+      h2 Areas of Specialization
 
-    .grid
+      .grid
 
-      article
-        h3 E-commerce
-        p.description I've built several e-commerce solutions ranging from custom #[a(href="https://shopify.com", target="_blank") Shopify] sites to fully custom #[a(href="https://nodejs.org", target="_blank") NodeJS] and #[a(href="https://stripe.com", target="_blank") Stripe] implementations.
+        article
+          h3 E-commerce
+          p.description I've built several e-commerce solutions ranging from custom #[a(href="https://shopify.com", target="_blank") Shopify] sites to fully custom #[a(href="https://nodejs.org", target="_blank") NodeJS] and #[a(href="https://stripe.com", target="_blank") Stripe] implementations.
 
-      article
-        h3 WebGL and Games
-        p.description Last year I worked on several interactive pieces for #[a(href="http://www.aenetworks.com/about", target="_blank") A&E Networks] and built an expirimental <a href="http://holiday2014.badassembly.com", target="blank">WebGL holiday project</a> with <a href="http://threejs.org", target="_blank">ThreeJS</a>.
+        article
+          h3 Television and Video
+          p.description In 2008 I co-founded an international #[a(href="#startup") television startup], building platform and apps to deliver HDTV in mulitple languages to web browsers, set top boxes and mobile devices.
 
-      article
-        h3 Television and Video
-        p.description In 2008 I co-founded an international #[a(href="#startup") television startup], building platform and apps to deliver HDTV in mulitple languages to web browsers, set top boxes and mobile devices.
+        article
+          h3 WebGL and Games
+          p.description Last year I worked on several interactive pieces for #[a(href="http://www.aenetworks.com/about", target="_blank") A&E Networks] and built an expirimental <a href="http://holiday2014.badassembly.com", target="blank">WebGL holiday project</a> with <a href="http://threejs.org", target="_blank">ThreeJS</a>.
 
-      article
-        h3 I18n & International Markets
-        p.description Several of my projects have required i18n for database driven content management systems as well as front end development and design. I have also traveled and lived abroad in Asia and Europe.
+        article
+          h3 Publishing and Ad Supported Media
+          p.description Familiar with high traffic websites and large content databases.  I've worked with most ad formats and have migrated client server platforms for greater traffic stability, created caching routines to optimize for millions of pageviews.
 
-      article
-        h3 Publishing and Ad Supported Media
-        p.description Familiar with high traffic websites and large content databases I've migrated clients to AWS and Cloudfront and created caching routines to optimize for millions of pageviews.
+        article
+          h3 Finance and Economics
+          p.description
+            | I'm a finance nerd and closet economist.
+            //- | , something that comes in handy when managing teams and designing products for corporate strategy.
+            | I consider myself an expert with CAC, TLV, churn, infrastructure costs and creating fluidly scalable financial models with multi-scenario reporting.
 
-      article
-        h3 Finance and Economics
-        p.description I'm a finance nerd and closet economist, something that comes in handy when managing teams and designing products for corporate strategy.  I consider myself an expert with CAC, TLV, churn, infrastructure costs and creating fluidly scalable financial models with multi-scenario reporting.
+        article
+          h3 Cloud Computing and Scalable Systems
+          p.description Whether building robustly featured platforms or handling 1000x traffic spikes for viral content, I'm well versed with programatic approaches to EC2, Azure, Heroku, S3, Cloudfront, and others.
 
-      article
-        h3 Cloud Computing and Scalable Systems
-        p.description Tasked with building a multi-channel tv platform, deploying staging environments for existing sites, and handling 1000x traffic spikes for viral content, I'm well versed with programatic approaches to EC2, Azure, Heroku, S3, Cloudfront, and others.
-
+        article
+          h3 I18n & International Markets
+          p.description Several of my projects have required i18n for database driven content management systems as well as front end development and design. I have also traveled and lived abroad in Asia and Europe.
 
   #dev-img
-  section#code
 
+  section#code
     figure
-      figcaption Here's a snapshot of skills I've gained over the years
-      aside#skills-tag-container(ng-controller='SkillsTagCtrl')
+      figcaption: h3 Here's a snapshot of skills I've gained over the years
+      #skills-tag-container(ng-controller='SkillsTagCtrl').center-constrained
         dl(ng-repeat='skills in skills.skills')
           dt {{skills.name}}
           dd(ng-repeat='item in skills.list')
@@ -99,15 +78,14 @@ block content
       |  of my code, including the full source to this site.
 
 
-  section.tone-2
-    h2#design TL;DR
+  section#design
+    h2 And here's the TL;DR
     p I started out as a video game hacker & hobbyist in the 90's and went on to officially study interactive design and new media theory through the SBCC SOMA program and USC's Institute of Multimedia Literacy program.
 
     p#clients Over the past 10 years I've been hired by dozens of companies as a contract designer, animator, developer, and project lead.
 
-    aside#company-logos
-      figure
-        figcaption Here are just a few of the brands I've worked with since 2005:
+    figure#brands
+      figcaption Here are just a few of the brands I've worked with since 2005:
       .small-images
         a(target='_blank', href='http://www.puma.com')
           img(src='img/puma.png', title='Puma')
@@ -147,9 +125,9 @@ block content
           img(src='img/amazon.png', title='Amazon', alt='Amazon')
 
 
-  section.tone-2#startup
+  section#startup
 
-    h2#section2 In 2008 I took a dive into startups
+    h2 In 2008 I took a dive into startups
 
     p From 2008 to 2012, I worked on building a large technology platform for AST, a multi-million dollar video startup that I helped co-found.  Over the 4 year period that we built out our product, I lead the system architecture, managed user experience, and oversaw the implementation of front end user interfaces across multiple browsers and native apps for embedded devices.  Building this platform I directly recruited and managed 8 fulltime software developers and numerous contractors.
 
@@ -193,8 +171,8 @@ block content
 
 
   #product-img
-  section.tone-3#teams
-    h1#section3 Project Lead
+  section#teams
+    h2 Project Lead
     p As a founding technology entrepreneur, I scaled a team of 2 up to nearly 20 fulltime employees with 13 direct reports.  I directly managed software engineers with all levels of technical experience ranging from very senior Chief Architects to college students.  I lead graphic design teams and recruited and trained interns. I oversaw everything from major releases requiring custom hardware deployment to quick marketing site updates.  For two years I managed relationships with clients overseas in Japan and Korea and managed offshore software developers in Europe.
     figure
       figcaption Some of the people I've managed over the years:
@@ -229,7 +207,7 @@ block content
         img(src='img/fkp9.png', alt='')
     p As an entrepreneur I gained mission critical experience managing budgets and deadlines, estimating costs, and adapting to complex situations in a rapidly changing environment. Although follow through and maximizing product quality are always key goals, I also have learned the immeasurable value of adapting plans quickly to take advantage of natural efficiencies and adding constraints to a project scope to achieve the highest value results.  As a hands on developer and participating in the architecture process, I can much more accurately estimate project timelines and resource requirements, evaluate team performance, and identify where negotiating a small change to a specification can result in huge cost savings.
   section#milestones
-    h1 Milestones Along the Way
+    h2 Milestones Along the Way
     aside
       ul#done-list
         li Wrote provisional patent for a p2p system
@@ -255,9 +233,9 @@ block content
   section.work#agency
 
 
-    h2 I recently lead development on BadAssembly.com.
+    h3 I recently lead development on BadAssembly.com.
     p: img(src="img/badass-desktop.png").full-bleed
-    h2 The site won both Awwwards SOTD and a Microsoft Developer Award.
+    h3 The site won both Awwwards SOTD and a Microsoft Developer Award.
     p: img(src="img/ms-developer-award.svg").dev-award
     p: img(src="img/awwwards-logo.svg").awwward
     p The site has been featured in numerous publications across the web.
@@ -266,7 +244,7 @@ block content
     p This site is deployed on Heroku using a Rails pipeline centered around CoffeeScript, Sass, and integrating some existing components in BackboneJS with Marionette.
     p: a.link(href="http://www.badassembly.com") View the Site
 
-    h2#webgl 2014 Holiday Project
+    h3#webgl 2014 Holiday Project
 
     figure.full-wide
       img(src="/img/webgl-showcase-macbook.png")
@@ -282,7 +260,7 @@ block content
     p The site is deployed on S3 and Heroku free tier so forgive the fact that it can take a tick to load as the instances spin up.
     p: a.link(href="http://holiday2014.badassembly.com")
 
-    h2#wineries Justin Wine & Landmark Vineyards
+    h3#wineries Justin Wine & Landmark Vineyards
     p: img.full-bleed(src="/img/JUSTIN-on-desk.jpg")
     figure.justin-wine
       img.iphone(src="/img/justin-iphone.png")
@@ -299,7 +277,7 @@ block content
     p AngularJS drives the front end of these sites and all of the content is managed through Advanced Custom Fields in wordpress using a block system we developed to allow the client to create an infinite number of combinations of different layouts using a very flexible grid built on Jeet with some customization for IE8.
     p While this build process is not ideal for every kind of site, it was an excellent solution to both support the Wordpress CMS requirement and the extreme flexibility the client designs demanded.
 
-    h2 Halos Mandarin Oranges
+    h3 Halos Mandarin Oranges
     p: img(src="img/halos-desktop.png").full-bleed
     p Part of a record setting $100 million marketing campaign for a new agriculture brand, this website is built on a wordpress backend to support the client's familiarity.  Using custom fields, almost all of the site content is hot swappable through the CMS.  GruntJS was used to precompile, concatenate, and minify Stylus and CoffeeScript and the whole project is deployed via Git and SSH with separate dev, staging, and production environments.
     p On the front end it utilizes Skroller for parallax animations, CreateJS for vector canvas animations, and YouTube's api for rich video metadata.
@@ -308,7 +286,7 @@ block content
   //- section.work#ecommerce
   //-   p: h1(style="color: red;") insert ADN project as an NDA thing
 
-  section.art
+  section#art
     h2 Photography is my longest lived hobby, and one of my earliest inspirations to get into software and web development.
 
     .image-grid

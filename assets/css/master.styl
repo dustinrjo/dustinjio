@@ -1,17 +1,9 @@
 @import '_settings'
+@import '_typography'
+@import '_index'
 
 
 
-normalize-css()
-base()
-*
-  box-sizing border-box
-
-body
-  // padding 0px 50px
-  font-family 'brand-serif'
-  p
-    line-height 1.5
 
 +below(1024px)
   body
@@ -29,34 +21,38 @@ header
   &.red
     background red
 
-h1, h2, h3
-  font-family 'Lato'
-  font-weight 700
+// ----------------
+// Grid
+// ----------------
 
-h2
-  text-align center
-  display block
-  margin 1.5em auto
-  max-width 23em
-  font-weight 700
+.center-constrained
+  center(1200px, 3em)
+
 
 section, .grid
   cf()
+
+  h3
+    color lighten(black, 40%)
+
+  h3, .description
+    text-align center
+
   article
-    col(1/3, cycle:3)
+    col(1/3, cycle:3, gutter: 5)
     +below(tablet)
       stack()
     &:last-child
       shift(1/3)
+    h3
+      font-family 'Lato'
+      font-weight 700
+      font-size 1rem
+      line-height 1.8
 
-  h3
-    font-weight 700
-    font-size 1rem
-    color lighten(black, 40%)
-    line-height 1.8
 
-  h3, .description
-    text-align center
+
+
 
 
 .grid
@@ -75,13 +71,18 @@ section, .grid
     col(1/2, cycle:2)
 
 .image-grid
-  cf()
+  // cf()
+  max-width 1200px
+  width 70%
+  margin-left auto
+  margin-right auto
   // .third
   // .quarter
   // .half
   // .full
   img
     max-width: 100%
+    display block
 
   .two-third
     col(2/3, cycle:1, gutter: 0.5)
@@ -97,7 +98,7 @@ section, .grid
   background ghostwhite
   figure
     margin 0px
-  figcaption
+  figcaption, .fig-label
     background white
     padding 1em
     line-height 1.2

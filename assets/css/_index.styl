@@ -1,23 +1,9 @@
 
 @require '_settings'
 
-
-@font-face
-  font-family 'web_symbols_ligaregular'
-  src url("fonts/websymbolsliga-regular-webfont.eot")
-  src url("fonts/websymbolsliga-regular-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/websymbolsliga-regular-webfont.woff") format("woff"), url("fonts/websymbolsliga-regular-webfont.ttf") format("truetype"), url("fonts/websymbolsliga-regular-webfont.svg#web_symbols_ligaregular") format("svg")
-  font-weight normal
-  font-style normal
-
 html, body
-  font-family 'brand-serif'
-  // background-color #eeeeee
   background-color ghost
 
-
-
-  padding 0px
-  margin 0px
 
 .vid-container
   padding 1.5em 0em
@@ -37,79 +23,40 @@ html, body
     margin auto
     padding 3em
     max-width 75%
+    &.img-fold
+      display inline-block
+      padding 1em .5em
+      text-align center
 
-.img-fold
-  display inline-block
-  margin auto
-  padding 2%
-  max-width 96%
-  display inline-block !important
-  margin auto
-  padding 1em .5em !important
-  max-width 96% !important
-  text-align center !important
-
-ul
-  list-style-type none
-  padding 0px
-  margin 0px
-  display block
-  width 100%
-  a
-    text-decoration none
 
 #skills-tag-container
-  width 100%
-  max-width 960px
   text-align center
   margin-top 3em
 
-dl
-  display inline-block
-  padding-right 2.5%
-  padding-bottom 2.5%
-  max-width 295px
-  vertical-align top
-  text-align center
+#code, #recently
+  padding-top 4.5em
 
-dt
-  margin-bottom .75rem
-  font-weight 900
-  letter-spacing 3px
-  text-align center
-  font-size .9em
-  text-transform uppercase
-  padding-bottom 1.2em
-  border-bottom 1px solid #c8c8c8
 
-dd
-  display inline-block
-  border-radius 4px
-  background-color #dedede
-  padding 0px 0px
-  margin .3em .2em
-  &:hover
-    background-color #ffd119
-  a
-    text-decoration none
-    color #3a3a3a
-    font-weight 600
-    font-size .75rem
+#code
+
+
+  cite
+    margin auto
     display block
-    padding 0.5em .75em
+    text-align center
 
-nav.social-2
-  width 75%
-  max-width 768px
-  margin 0em auto 4em auto
+
+nav.social
+  background white
   ul
+    max-width 768px
+    width 75%
+    margin 0em auto 4em auto
     cf()
   li
     display block
     height 100px
     span(1/10)
-    // background lightseagreen
-    // background mediumseagreen
     display table
     table-layout fixed
     a
@@ -121,26 +68,6 @@ nav.social-2
       &:hover
         color grey
 
-nav.social
-  ul
-    cf()
-  li
-    display block
-    height 100px
-    span(1/10)
-    background lightseagreen
-    // background mediumseagreen
-    display table
-    table-layout fixed
-    a
-      color white
-      display table-cell
-      vertical-align middle
-      text-align center
-      width 100%
-    &:hover
-      background pink
-      // background lightcoral
 
 +below(mobile)
   nav.social, nav.social-2
@@ -158,43 +85,6 @@ nav.social
   // height 120px
   // padding 1em
 
-.main-title
-  font-family brand-sans
-  font-weight 700
-
-  color #3a3a3a
-  font-size .8rem
-
-  letter-spacing 3px
-  max-width 250px
-  display block
-  margin auto
-  text-align center
-  padding 1em 0em
-  max-width 100%
-
-.logo-box
-  margin auto
-
-.nav-button
-  background-color mediumseagreen
-  padding 1.2em
-  margin 2px 0px
-  text-align center
-  width 100%
-  display inline-block
-  box-sizing border-box
-  color white
-  font-size .8em
-  letter-spacing 2px
-  font-weight 600
-  text-decoration none
-  width 13em
-  padding 1.2em 1.5em
-  font-size .65em
-  width 100%
-  &:hover
-    background-color #3a3a3a
 
 #agency-img
 #dev-img
@@ -212,56 +102,27 @@ nav.social
   background-image url("../img/bg/team.png")
 
 #agency-img
-  min-height 200px
-  // background-size 100%
   background-image url("../img/agency.jpg")
 
 
-section
-  padding 2em 4%
-  // background-color #fbd71f
-  p
-    width 100%
-    max-width 760px
-    margin auto
-    padding 0em 0em 2em 0em
-  h1
-    width 100%
-    max-width 760px
-    color #3a3a3a
-    font-size 1.2rem
-    line-height 1.5
 
-    font-family brand-serif
-    font-size 1.8em
-    line-height 2
+#brands
 
-
-
-    // text-transform uppercase
-    // letter-spacing 3px
-    margin auto
-    // padding 2em 0em 0em 0em
-    text-align center
-
-    a
-      color firebrick
-      text-decoration none
+  center(760px, 0em)
 
   aside
     width 80%
     max-width 800px
     margin auto
+
+
   em
     color red
     font-size 2em
 
 .small-images
-  // width 98%
-  // max-width 768px
   display block
   cf()
-  // text-align center
   a
     text-decoration none
     display block
@@ -337,8 +198,8 @@ figcaption
     margin 1em
     margin 1em
     &:before
-      content "\00d7"
-      font-family 'web_symbols_ligaregular'
+      content "\e606"
+      font-family 'icomoon'
       position absolute
       margin-left -2em
       margin-top 2px
@@ -393,15 +254,6 @@ footer
     display block
     &:hover
       background lightseagreen
-
-// .tone-1
-//   background-color #F3F3ED
-
-// .tone-2
-//   background-color #EAEAEA
-
-// .tone-3
-//   background-color #F3F3ED
 
 
 +above(mobile)
