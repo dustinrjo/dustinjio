@@ -2,32 +2,50 @@ extends layout
 
 block content
 
+  //- nav.social
+  //-   ul
+  //-     li: a.icon-tumblr(target='_blank', href='http://ilimperium.tumblr.com')
+  //-     li: a.icon-linkedin(target='_blank', href='http://www.linkedin.com/in/dustinrjo')
+  //-     li: a.icon-twitter(target='_blank', href='http://twitter.com/ilimperium')
+  //-     li: a.icon-github(target='_blank', href='http://github.com/dustinrjo')
+  //-     li: a.icon-behance(target='_blank', href='http://www.behance.net/dustinj')
+  //-     li: a.icon-feather(target='_blank', href='https://medium.com/@ilimperium')
+  //-     li: a.icon-text-document(href='/DRJCV.pdf')
+  //-     li: a.icon-location-pin(target='_blank', href='http://goo.gl/maps/GZK2b')
+  //-     li: a.icon-mail(href='mailto:me@dustinj.io')
+  //-     li: a.icon-code(target='_blank', href='https://coderwall.com/dustinrjo')
+  //-     li.telephone: a.icon-phone(href='tel:8055707813')
+
   header#header
 
     .logo-box
       img.headshot(src='img/dustin.png', alt='Dustin Johnson, Web Developer')
-      .main-title DUSTIN JOHNSON
+      //- .main-title DUSTIN JOHNSON
 
-    div
-      ul.icon-set
+
+
+  section.intro
+    h1 Hello, I am a <a href="#code">full stack</a> interactive developer with a background in <a href="#design">design</a>.  I've <a href="#teams">lead teams</a>, worked for <a href="#agency">award winning agencies</a>, and <a href="#clients">flown solo</a> many times.  I've been brought in to maintain legacy systems and I've <a href="#startup">architected large projects</a> from scratch. If you're looking for someone with range, I'm your huckleberry.
+
+    nav.social-2
+      ul
         li: a.icon-tumblr(target='_blank', href='http://ilimperium.tumblr.com')
         li: a.icon-linkedin(target='_blank', href='http://www.linkedin.com/in/dustinrjo')
         li: a.icon-twitter(target='_blank', href='http://twitter.com/ilimperium')
         li: a.icon-github(target='_blank', href='http://github.com/dustinrjo')
         li: a.icon-behance(target='_blank', href='http://www.behance.net/dustinj')
         li: a.icon-feather(target='_blank', href='https://medium.com/@ilimperium')
-        li: a.icon-text-document(href='/DRJCV.pdf')
+        li: a.icon-text-document(target='_blank', href='/DJCV.pdf')
         li: a.icon-location-pin(target='_blank', href='http://goo.gl/maps/GZK2b')
-        li: a.icon-mail(href='mailto:dustinrjo@gmail.com')
+        li: a.icon-mail(href='mailto:me@dustinj.io')
         li: a.icon-code(target='_blank', href='https://coderwall.com/dustinrjo')
+        li.telephone: a.icon-phone(href='tel:8055707813')
 
-    ul#nav-btns
-      li: a#designbtn.nav-button(href='#/designer') DESIGNER
-      li: a#devbtn.nav-button(href='#/developer') DEVELOPER
-      li: a#productbtn.nav-button(href='#/product') PRODUCT LEAD
+    //- ul#nav-btns
+    //-   li: a#designbtn.nav-button(href='#/designer') DESIGNER
+    //-   li: a#devbtn.nav-button(href='#/developer') DEVELOPER
+    //-   li: a#productbtn.nav-button(href='#/product') PRODUCT LEAD
 
-  section.intro
-    h1 I am a full stack interactive developer with a background in design.  I've lead teams, worked on teams, and flown solo many times.  I've been brought in to maintain legacy systems and I've architected large projects from scratch. If you're looking for someone with range, you've come to the right place.
 
   section
     h2 I also specialize in a few things:
@@ -36,35 +54,35 @@ block content
 
       article
         h3 E-commerce
-        .description I've built several e-commerce solutions ranging from Shopify sites to fully custom NodeJS and Stripe implementations.
+        p.description I've built several e-commerce solutions ranging from custom #[a(href="https://shopify.com", target="_blank") Shopify] sites to fully custom #[a(href="https://nodejs.org", target="_blank") NodeJS] and #[a(href="https://stripe.com", target="_blank") Stripe] implementations.
 
       article
         h3 WebGL and Games
-        .description Last year I worked on several interactive pieces for A&E Networks and built an expirimental <a href="http://holiday2014.badassembly.com", target="blank">WebGL holiday project</a> with <a href="http://threejs.org", target="_blank">ThreeJS</a>.
+        p.description Last year I worked on several interactive pieces for #[a(href="http://www.aenetworks.com/about", target="_blank") A&E Networks] and built an expirimental <a href="http://holiday2014.badassembly.com", target="blank">WebGL holiday project</a> with <a href="http://threejs.org", target="_blank">ThreeJS</a>.
 
       article
         h3 Television and Video
-        .description In 2008 I co-founded an international television startup company delivering HDTV in mulitple languages to web browsers, set top boxes and mobile devices.
+        p.description In 2008 I co-founded an international #[a(href="#startup") television startup], building platform and apps to deliver HDTV in mulitple languages to web browsers, set top boxes and mobile devices.
 
       article
-        h3 Internationalization / Localization / International Projects
-        .description Several of my projects have required i18n for database driven content management systems as well as front end development and design.
+        h3 I18n & International Markets
+        p.description Several of my projects have required i18n for database driven content management systems as well as front end development and design. I have also traveled and lived abroad in Asia and Europe.
 
       article
         h3 Publishing and Ad Supported Media
-        .description Familiar with high traffic websites with large content databases I've migrated clients to AWS and Cloudfront and created caching routines to optimize for millions of pageviews.
+        p.description Familiar with high traffic websites and large content databases I've migrated clients to AWS and Cloudfront and created caching routines to optimize for millions of pageviews.
 
       article
         h3 Finance and Economics
-        .description Not really your first thought for a developer, but I'm a finance nerd and economics hobbyist, something that comes in handy when managing teams and designing products and corporate strategy.
+        p.description I'm a finance nerd and closet economist, something that comes in handy when managing teams and designing products for corporate strategy.  I consider myself an expert with CAC, TLV, churn, infrastructure costs and creating fluidly scalable financial models with multi-scenario reporting.
 
       article
         h3 Cloud Computing and Scalable Systems
-        .description Tasked with building a multi-channel tv platform, deploying staging environments for existing sites, and handling 1000x traffic spikes for viral content, I'm well versed with programatic approaches to EC2, Azure, Heroku, S3, Cloudfront, andothers.
+        p.description Tasked with building a multi-channel tv platform, deploying staging environments for existing sites, and handling 1000x traffic spikes for viral content, I'm well versed with programatic approaches to EC2, Azure, Heroku, S3, Cloudfront, and others.
 
 
   #dev-img
-  section
+  section#code
 
     figure
       figcaption Here's a snapshot of skills I've gained over the years
@@ -75,69 +93,74 @@ block content
             a(target='_blank', ng-href='{{item.URL}}') {{item.name}}
 
     cite You can follow up here to see a few
-      a(href="https://coderwall.com/dustinrjo")  protips
+      a(href="https://coderwall.com/p/u/dustinrjo")  protips
       |  and
-      a(href="http://github.com")  gists
-      |  of my code, including the full source to this (aka @) site.
+      a(href="https://gist.github.com/dustinrjo")  gists
+      |  of my code, including the full source to this site.
 
 
   section.tone-2
-    h2 TL;DR
+    h2#design TL;DR
     p I started out as a video game hacker & hobbyist in the 90's and went on to officially study interactive design and new media theory through the SBCC SOMA program and USC's Institute of Multimedia Literacy program.
 
-    p Over the past 10 years I've been hired by dozens of companies as a contract designer, animator, developer, and project lead.
+    p#clients Over the past 10 years I've been hired by dozens of companies as a contract designer, animator, developer, and project lead.
 
-    aside#company-logos.small-images
+    aside#company-logos
       figure
         figcaption Here are just a few of the brands I've worked with since 2005:
-      a(target='_blank', href='http://www.puma.com')
-        img(src='img/puma.png', title='Puma')
-      a(target='_blank', href='http://www.oprah.com/own')
-        img(src='img/own.png', title='Oprah Winphrey Network')
-      a(target='_blank', href='http://www.theartistscompany.com')
-        img(src='img/acompany.png', title='The Artists Company')
-      a(target='_blank', href='http://www.vmagazine.com/')
-        img(src='img/vmagazine.png', title='V Magazine')
-      a(target='_blank', href='http://tokyopop.com/')
-        img(src='img/tp.png', title='Tokyopop')
-      a(target='_blank', href='http://www.wga.org/')
-        img(src='img/wgaw.png', title="Writer's Guild of America West")
-      a(target='_blank', href='http://www.foxmovies.com/')
-        img(src='img/fox.png', title='20th Century Fox')
-      a(target='_blank', href='http://www.sothebys.com/en.html')
-        img(src='img/sothebys.png', title="Sotheby's International Realty")
-      a(target='_blank', href='http://www.badassembly.com')
-        img(src='img/ba.png', title='Bad Assembly')
-      a(target='_blank', href='http://dentistry.usc.edu/')
-        img(src='img/uscdentistry.png', title='USC School of Dentistry')
-      a(target='_blank', href='http://sevenly.org')
-        img(src='img/sevenly.png', title='Sevenly')
-      a(target='_blank', href='http://ssk.com/')
-        img(src='img/ssk.png', title='SS+K')
-      a(target='_blank', href='http://justinwine.com/')
-        img(src='img/justin.png', title='Justin Wines', alt='Justin Wines')
-      a(target='_blank', href='http://landmarkwine.com/')
-        img(src='img/landmark.png', title='Landmark Vineyards', alt='Landmark Vineyards')
-      a(target='_blank', href='http://history.com/')
-        img(src='img/history.png', title='History.com', alt='History.com')
-      a(target='_blank', href='http://halos-fun.com/')
-        img(src='img/halos.png', title='Halos', alt='Halos')
+      .small-images
+        a(target='_blank', href='http://www.puma.com')
+          img(src='img/puma.png', title='Puma')
+        a(target='_blank', href='http://www.oprah.com/own')
+          img(src='img/own.png', title='Oprah Winphrey Network')
+        a(target='_blank', href='http://www.theartistscompany.com')
+          img(src='img/acompany.png', title='The Artists Company')
+        a(target='_blank', href='http://www.vmagazine.com/')
+          img(src='img/vmagazine.png', title='V Magazine')
+        a(target='_blank', href='http://tokyopop.com/')
+          img(src='img/tp.png', title='Tokyopop')
+        a(target='_blank', href='http://www.wga.org/')
+          img(src='img/wgaw.png', title="Writer's Guild of America West")
+        a(target='_blank', href='http://www.foxmovies.com/')
+          img(src='img/fox.png', title='20th Century Fox')
+        a(target='_blank', href='http://www.sothebys.com/en.html')
+          img(src='img/sothebys.png', title="Sotheby's International Realty")
+        a(target='_blank', href='http://www.badassembly.com')
+          img(src='img/ba.png', title='Bad Assembly')
+        a(target='_blank', href='http://dentistry.usc.edu/')
+          img(src='img/uscdentistry.png', title='USC School of Dentistry')
+        a(target='_blank', href='http://sevenly.org')
+          img(src='img/sevenly.png', title='Sevenly')
+        a(target='_blank', href='http://ssk.com/')
+          img(src='img/ssk.png', title='SS+K')
+        a(target='_blank', href='http://justinwine.com/')
+          img(src='img/justin.png', title='Justin Wines', alt='Justin Wines')
+        a(target='_blank', href='http://landmarkwine.com/')
+          img(src='img/landmark.png', title='Landmark Vineyards', alt='Landmark Vineyards')
+        a(target='_blank', href='http://history.com/')
+          img(src='img/history.png', title='History.com', alt='History.com')
+        a(target='_blank', href='http://halos-fun.com/')
+          img(src='img/halos.png', title='Halos', alt='Halos')
+        a(target='_blank', href='http://iamkoream.com/')
+          img(src='img/koream.png', title='Koream Journal', alt='Koream')
+        a(target='_blank', href='http://amazon.com/')
+          img(src='img/amazon.png', title='Amazon', alt='Amazon')
 
 
-  section.tone-2
+  section.tone-2#startup
 
     h2#section2 In 2008 I took a dive into startups
 
-    p From 2008 to 2012, I worked on building a large technology platform for AST, a multi-million dollar video startup that I helped co-found.  Over the 4 year period that we built out our product, I lead the system architecture, managed user experience, and oversaw the implementation of front end user interfaces across multiple browsers and native apps for embedded devices.  Building this platform I directly recruited and managed 8 fulltime software developers.
+    p From 2008 to 2012, I worked on building a large technology platform for AST, a multi-million dollar video startup that I helped co-found.  Over the 4 year period that we built out our product, I lead the system architecture, managed user experience, and oversaw the implementation of front end user interfaces across multiple browsers and native apps for embedded devices.  Building this platform I directly recruited and managed 8 fulltime software developers and numerous contractors.
 
     figure
       .img-div
         img(src='img/ast-stb.png')
       figcaption I assembled and lead the team developing an embedded Linux set top box.
 
-    p Throughout this process I gained extensive experience working with video transcoding, embedded systems, distributed computing, and content schema design.
+    p Throughout this process I gained extensive experience working with video transcoding, embedded systems, distributed computing, and RDB schema design for content metadata.
 
-    p The platform I built transcodes massive volumes of HDTV source material into multi-bitrate HTTP Live Streaming delivered across multiple server and cloud platforms linked to a custom built content management system where international TV programmers can schedule shows to playout on channels, manage pricing for video on demand, and CRUD multi-language metadata.
+    p The platform I built transcodes massive volumes of HDTV source material into multi-bitrate HTTP Live Streaming delivered across multiple server and cloud platforms linked to a custom built content management system where international TV programmers can schedule shows to play out on channels, manage pricing for video on demand, and maintain multi-language metadata.
 
     figure
       .img-div
@@ -161,7 +184,7 @@ block content
         img#ast-stb(src='img/ast-lite.png')
       figcaption e-mail me to get a trial login to the beta site. of the web version here:&nbsp
         a(target='_blank', href='http://americanstandard.tv') beta.americanstandard.tv
-    p In this process we deployed prototype iOS apps as well as a fully working Android and iOS remote control for the TV service.
+    p In this process we deployed prototype iOS apps as well as fully functional Android and iOS remote controls for the TV service.
     .img-div
       img.img-fold(src='img/ipad-ast.png')
       img.img-fold(src='img/iphone-ast-ui.png')
@@ -170,7 +193,7 @@ block content
 
 
   #product-img
-  section.tone-3
+  section.tone-3#teams
     h1#section3 Project Lead
     p As a founding technology entrepreneur, I scaled a team of 2 up to nearly 20 fulltime employees with 13 direct reports.  I directly managed software engineers with all levels of technical experience ranging from very senior Chief Architects to college students.  I lead graphic design teams and recruited and trained interns. I oversaw everything from major releases requiring custom hardware deployment to quick marketing site updates.  For two years I managed relationships with clients overseas in Japan and Korea and managed offshore software developers in Europe.
     figure
@@ -191,6 +214,7 @@ block content
         img(src='img/sk.png', title='Jr. .Net Developer')
         img(src='img/is.png', title='Jr. Designer')
     p I’ve used most major project management tools ranging from Jira and Basecamp to Trello and MS Project. I build wireframes and design mock ups in the Adobe Creative Suite and have created both granular and high level documentation for projects ranging in length from days to years. I specialize in iterative development with short release cycles, but also jump at the opportunity to create painstakingly wellcrafted up front specifications for larger projects.
+    p Beyond just being a hands on developer I'm adept at print and digital page layout and typography, using everything from InDesign to Pages and PowerPoint for exceptional presentations and buisness collateral.
     figure
       figcaption Sample from product specifications prepared for a b2b client.
       #functional-spec
@@ -210,72 +234,248 @@ block content
       ul#done-list
         li Wrote provisional patent for a p2p system
         li Built initial hardware and software proof of concept that raised $1 million
-        li Regularly attend global media and technology conferences such as CES, NAB, Digital Hollywood, TIFFCOM, etc.
+        li Regularly attended global media and technology conferences such as CES, NAB, Digital Hollywood, TIFFCOM, etc.
         li Regularly visit technology contacts and partners in Silicon Valley, NYC, Tokyo, Seattle
         li Regularly managed relationships with C-Level executives, business owners, and high net worth individuals.
         li Wrote product specifications for dedicated IPTV set top box
         li Wrote functional specifications for custom CMS / Digital Asset Management system
-        li Wrote video encoding and storage best practices and standards speficifactions for multi-region, multi-resolution, multi-language assets
-        li Wrote functional specifications and project plan for Web Browser multi-channel TV platform
-        li Wrote requirements, scheduled and executed over 23 consecutive 2 week Agile sprints
+        li Wrote video encoding and storage best practices and standards for multi-region, multi-bitrate, multi-language assets
+        //- li Wrote functional specifications and project plan for Web Browser multi-channel TV platform
         li Continually sourced requirements from internal business development executives, 3rd Party licensing vendors, niche consumer groups across multiple demographics through market research and a/b testing, and traveled to meet with content suppliers at trade shows in Tokyo.
+        li Wrote requirements, scheduled and executed over 23 consecutive 2 week Agile sprints
+
+
+  #agency-img
+  section#recently
+    h2 Recently I've worked on agency projects
+    p This has been a great way to refine my build process, which I've written about #[a(href="https://medium.com/@ilimperium/a-deep-dive-into-modern-web-development-process-and-tools-e0824fc2447d", target="_blank") here], and get up to date on the capabilities and workflows of the latest web technoligies like #[a(href="#webgl") this WebGl project].
+    p One of the larger projects included a pair of next-gen AngularJS and Wordpress driven ecommerce website for two legendary wineries that I've written about #[a(href="#wineries") here].
+    //- p In addition to that I play an advisory role in two e-commerce startups.
+
+  section.work#agency
+
+
+    h2 I recently lead development on BadAssembly.com.
+    p: img(src="img/badass-desktop.png").full-bleed
+    h2 The site won both Awwwards SOTD and a Microsoft Developer Award.
+    p: img(src="img/ms-developer-award.svg").dev-award
+    p: img(src="img/awwwards-logo.svg").awwward
+    p The site has been featured in numerous publications across the web.
+    p: img(src="img/badassembly-flat-chrome.png").full-bleed
+
+    p This site is deployed on Heroku using a Rails pipeline centered around CoffeeScript, Sass, and integrating some existing components in BackboneJS with Marionette.
+    p: a.link(href="http://www.badassembly.com") View the Site
+
+    h2#webgl 2014 Holiday Project
+
+    figure.full-wide
+      img(src="/img/webgl-showcase-macbook.png")
+      figcaption A WebGL expiriment.
+
+    p For Christmas 2014, I co-lead development and R&D for a WebGL project to test the capabilities of modern browsers with a bit of humor and holiday spirit.  Santa crash lands on a distant planet and decides to crack open some beer, throw down a christmas mix tape on his boombox and dance away his troubles.
+    p: img.full-bleed(src="/img/webgl-santa-dancing.jpg")
+    p This project has it all.  Its responsive, it employs the web audio api for live waveforms, it stretches browser performance with ThreeJS, gracefully degrades on lesser devices when possible, and even implements a custom animated SVG preloader.  It did not make the production version but in development it also employed free flying with collission detection and on iPad supported gestural controls.
+    p: img.full-bleed(src="/img/webgl-santa-previs.jpg")
+    p
+      img(src="/img/webgl-santa-previs-2.jpg")
+      img(src="/img/webgl-santa-previs-3.jpg")
+    p The site is deployed on S3 and Heroku free tier so forgive the fact that it can take a tick to load as the instances spin up.
+    p: a.link(href="http://holiday2014.badassembly.com")
+
+    h2#wineries Justin Wine & Landmark Vineyards
+    p: img.full-bleed(src="/img/JUSTIN-on-desk.jpg")
+    figure.justin-wine
+      img.iphone(src="/img/justin-iphone.png")
+      img.tablet(src="/img/justin-ipad-portrait.png")
+      //- img.ibm(src="/img/justin-2009-ibm.png")
+      figcaption Responsive and IE8 compatible.
+    p Sales for both of these multi-million dollar wineries are run through e-commerce sites that I built with one other developer at Bad Assembly.
+    p At the client's request we used Wordpress as a CMS but opted to implement both sites as single page web applications through custom extensions to emerging JSON api's for wordpress.
+    //- p: h1(style="color: red;") insert Landmark screenshots
+    p: img.full-bleed(src="/img/landmark-laptop.png")
+
+    p Both sites are managed through Git deployment across dev, staging, and production environments and are pre-compiled from Coffeescript and Stylus using Brunch in conjunction with Gulp for a secondary build to support all the way back to IE8 with Blessed CSS.
+    p: img.ibm(src="/img/justin-2009-ibm.png")
+    p AngularJS drives the front end of these sites and all of the content is managed through Advanced Custom Fields in wordpress using a block system we developed to allow the client to create an infinite number of combinations of different layouts using a very flexible grid built on Jeet with some customization for IE8.
+    p While this build process is not ideal for every kind of site, it was an excellent solution to both support the Wordpress CMS requirement and the extreme flexibility the client designs demanded.
+
+    h2 Halos Mandarin Oranges
+    p: img(src="img/halos-desktop.png").full-bleed
+    p Part of a record setting $100 million marketing campaign for a new agriculture brand, this website is built on a wordpress backend to support the client's familiarity.  Using custom fields, almost all of the site content is hot swappable through the CMS.  GruntJS was used to precompile, concatenate, and minify Stylus and CoffeeScript and the whole project is deployed via Git and SSH with separate dev, staging, and production environments.
+    p On the front end it utilizes Skroller for parallax animations, CreateJS for vector canvas animations, and YouTube's api for rich video metadata.
+    p Perhaps most impressive is the cross device and cross browser support back to IE9 despite the pervasive use of gradients, parallax, and hardware accelerated CSS3 animations.
+
+  //- section.work#ecommerce
+  //-   p: h1(style="color: red;") insert ADN project as an NDA thing
+
+  section.art
+    h2 Photography is my longest lived hobby, and one of my earliest inspirations to get into software and web development.
+
+    .image-grid
+
+      figure.third
+        img(src="/img/gallery/tokyo-dusk.jpg")
+        figcaption Tokyo at Dusk, Kachidoki Island
+
+      figure.third
+        img(src="/img/gallery/edo-tokyo-street.jpg")
+        figcaption Edo at Night
+
+      figure.third
+        img(src="/img/gallery/escalate.jpg")
+        figcaption Shiodome Escalator
+
+    .image-grid
+
+      figure.third
+        img(src="/img/gallery/bronze-trees.jpg")
+        figcaption Nishi Shinjuku
+
+      figure.third
+        img(src="/img/gallery/hal-mode-iko.jpg")
+        figcaption Hal Mode Iko
+
+      figure.third
+        img(src="/img/gallery/autumn-izuzu.jpg")
+        figcaption Isuzu in Fall
+
+    .image-grid
+
+      figure.full
+        img(src="/img/gallery/hudson.jpg")
+        figcaption Hudson at dusk, KODAK PORTA 800 ISO
+
+    .image-grid
+
+      figure.full
+        img(src="/img/gallery/hyde-park-london.jpg")
+        figcaption Hyde Park, London
+
+    .image-grid
+
+      figure.full
+        img(src="/img/gallery/irish-mar-vista.jpg")
+        figcaption Irish Mar Vista
+
+    .image-grid
+
+      figure.full
+        img(src="/img/gallery/calle-vista.jpg")
+        figcaption The road to ensanada, KODAK Kodachrome 400 ISO
+
+
+
+    .image-grid
+      figure.two-third
+        img(src="/img/gallery/california-oak.jpg")
+        figcaption Old California
+
+      figure.third
+        img(src="/img/gallery/ranch-portrait.jpg")
+        figcaption Ranchland
+
+
+    .image-grid
+
+      figure.full
+        img(src="/img/gallery/tokyo-night.jpg")
+        figcaption Japan Future City
+
+    .image-grid
+
+      figure.full
+        img(src="/img/gallery/la.jpg")
+        figcaption The little city by the sea
+
+    .image-grid
+
+      figure.full
+        img(src="/img/gallery/montecito.jpg")
+        figcaption Montecito Garden
+
+
+    //- p insert art image grid here
+    //- .image-grid
+
+    //-   figure.quarter
+    //-     img(src="/img/gallery/image.jpg")
+    //-     figcaption Sunday in Shibuya
+
+    //-   figure.quarter
+    //-     img(src="/img/gallery/image.jpg")
+    //-     figcaption Sunday in Shibuya
+
+    //-   figure.quarter
+    //-     img(src="/img/gallery/image.jpg")
+    //-     figcaption Sunday in Shibuya
+
+    //-   figure.quarter
+    //-     img(src="/img/gallery/image.jpg")
+    //-     figcaption Sunday in Shibuya
+
+
+    //- .image-grid
+    //-   figure.full
+    //-     img(src="/img/gallery/image.jpg")
+    //-     figcaption Sunday in Shibuya
+
+
+    //- .image-grid
+    //-   figure.half
+    //-     img(src="/img/gallery/image.jpg")
+    //-     figcaption Sunday in Shibuya
+    //-   figure.half
+    //-     img(src="/img/gallery/image.jpg")
+    //-     figcaption Sunday in Shibuya
+
+    //-   figure.half
+    //-     img(src="/img/gallery/image.jpg")
+    //-     figcaption Sunday in Shibuya
+    //-   figure.half
+    //-     img(src="/img/gallery/cornfield.jpg")
+    //-     figcaption Illinois in September
+
+    //- .image-grid
+    //-   figure.two-third
+    //-     img(src="/img/gallery/densho.jpg")
+    //-     figcaption Tokyo Subway
+
+    //-   figure.third
+    //-     img(src="/img/gallery/escalate.jpg")
+    //-     figcaption Shiodome Escalator
+
+    //- .image-grid
+    //-   figure.two-third
+    //-     img(src="/img/gallery/heat-lightening.jpg")
+    //-     figcaption Tokyo Subway
+
+    //-   figure.third
+    //-     img(src="/img/gallery/sunrise-fence.jpg")
+    //-     figcaption Shiodome Escalator
+
+
+
+
+  //- section.who
+  //-   h2 I love single malt highland scotch matured in used oak casks from Xeres Spain, single origin coffee roasted by bearded men with tatoos, Japanese rally inspired sports cars, aged robusto cigars and bank robbery movies.  I'm conservative enough to be considered old school but wild enough to snowboard down a mountain in a speedo.
+
+  section.where
+    h2 I am currently living the dream in downtown LA.
 
   section.todos
 
-    li
-      | mention agency client relationship experience
-
-    li
-      | mention why python came into play
-
-    li
-      | mention the bamf stack and where you could read more
-
-    li
-      | mention the webgl thing and where you can see more
-
-    li
-      | throw up some gists on github
-
-    li
-      | include some comps from JUSTIN
-
-    li
-      | talk about CMS experience / emphasis on the nth page
-
-    li
-      | talk about the ADN project but cloak it with NDA style language
-
-    li
-      | add ascii art to the console and the minified javascipt
-
-    li
-      | make sure that javascript is minified and gzipped!
-
-    li
-      | maybe use VUE instead of AngularJS or maybe react since it's popular, or use roots' build in yaml compiler
-
-    li
-      | setup google analytics
-
-    li
-      | new nav plz!
-
-
-  section#recently
-    h2 Recently I've worked on agency projects
-    p This has been a great way to refine my build process, which I wrote about here, and get up to date on the capabilities and workflows of the latest web technoligies like this WebGl project.
-    p One of the larger projects included a pair of next-gen AngularJS and Wordpress driven ecommerce website for two legendary wineries that I write about here.
-    p In addition to that I play an advisory role in two e-commerce startups.
-
-  section.work
-    h2 I recently built BadAssembly.com and won an award SOTD and featured in numerous publications across the web.
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque aspernatur aperiam ea aut quos cupiditate vel autem. Beatae, distinctio doloremque soluta in cumque nostrum id magnam error sed sint corporis sit eaque natus provident facilis, dicta placeat temporibus. In nemo, iure soluta? Vero sint amet quasi cum, assumenda exercitationem!
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora neque aspernatur aperiam ea aut quos cupiditate vel autem. Beatae, distinctio doloremque soluta in cumque nostrum id magnam error sed sint corporis sit eaque natus provident facilis, dicta placeat temporibus. In nemo, iure soluta? Vero sint amet quasi cum, assumenda exercitationem!
-
-  section.art
-    h2 I have a passion for photography and art
-    p insert art image grid here
+    //- li make sure that javascript is minified and gzipped!
+    //- li fix the typos
+    //- li update all the anchor links throughout the page (maybe re-implement scrollTo)
+    li lock down 12 column grid and or centering rules
+    li lock down the typography rules
+    li fix responsive for tablet and mobile
+    li deploy to github publicly and add the link to the project
+    li deploy the project
+    hr
+    li maybe add a sticky nav or some scroll rules for the back to top
+    li maybe add the google map to the bottom of the page
+    li update behance with imagery from your newer projects
 
 
   footer
