@@ -14,6 +14,7 @@ html, body
   p
     line-height 1.6
 
+
 a
   font-family 'lato'
   font-weight 400
@@ -89,6 +90,9 @@ dl
   max-width 33%
   vertical-align top
   text-align center
+  +below(tablet-portrait)
+    max-width 50%
+
 
 dt
   margin-bottom .75rem
@@ -99,9 +103,6 @@ dt
   text-transform uppercase
   padding-bottom 1.2em
   border-bottom 1px solid #c8c8c8
-
-
-
 
 
 dd
@@ -126,3 +127,18 @@ section
     margin auto
     padding 0em 0em 2em 0em
 
+
++below(tablet-portrait)
+  html, body
+    section
+      p
+        padding 0em 2em 2em 2em
+  h1, h2, h3
+    padding 0em 2rem
++below(mobile)
+  h2
+    font-size 1.8rem
+  h3
+    font-size 1.4rem
+  dl
+    max-width 100%

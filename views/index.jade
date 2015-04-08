@@ -8,6 +8,11 @@ block content
   section.intro
     h1 Hello, I am a <a href="#code">full stack</a> interactive developer with a background in <a href="#design">design</a>.  I've <a href="#teams">lead teams</a>, worked for <a href="#agency">award winning agencies</a>, and <a href="#clients">flown solo</a> many times.  I've been brought in to maintain legacy systems and I've <a href="#startup">architected large projects</a> from scratch. If you're looking for someone with range, I'm your huckleberry.
 
+  section.mobile.mobile-intro
+    p: h1 Hello, I am a <a href="#code">full stack</a> interactive developer with a background in <a href="#design">design</a>.
+    p: h1 I've <a href="#teams">lead teams</a>, worked for <a href="#agency">award winning agencies</a>, and <a href="#clients">flown solo</a> many times.
+    p: h1 I've been brought in to maintain legacy systems and I've <a href="#startup">architected large projects</a> from scratch. If you're looking for someone with range, I'm your huckleberry.
+
   nav.social
     ul
       li: a.icon-tumblr(target='_blank', href='http://ilimperium.tumblr.com')
@@ -23,7 +28,7 @@ block content
       li.telephone: a.icon-phone(href='tel:8055707813')
 
 
-  section
+  section#specialization
     .center-constrained
       h3 Areas of Specialization
 
@@ -75,7 +80,7 @@ block content
       a(href="https://coderwall.com/p/u/dustinrjo")  protips
       |  and
       a(href="https://gist.github.com/dustinrjo")  gists
-      |  of my code, including the full source to this site.
+      |  of my code, including the full source to #[a(href="https://github.com/dustinrjo/dustinjio", target="_blank") this site].
 
 
   #backstory-img
@@ -252,7 +257,7 @@ block content
     p: img(src="img/badassembly-flat-chrome.png").full-bleed
 
     p This site is deployed on Heroku using a Rails pipeline centered around CoffeeScript, Sass, and integrating some existing components in BackboneJS with Marionette.
-    p: a.link(href="http://www.badassembly.com") View the Site
+    p.site-link: a.link(href="http://www.badassembly.com", target="_blank") View the Site
 
     h3#webgl 2014 Holiday Project
 
@@ -268,7 +273,8 @@ block content
     //-   img(src="/img/webgl-santa-previs-2.jpg")
     //-   img(src="/img/webgl-santa-previs-3.jpg")
     p The site is deployed on S3 and Heroku free tier so forgive the fact that it can take a tick to load as the instances spin up.
-    p: a.link(href="http://holiday2014.badassembly.com")
+    p.site-link: a.link(href="http://holiday2014.badassembly.com", target="_blank") View the Site
+
 
     h3#wineries Justin Wine & Landmark Vineyards
     p: img.full-bleed(src="/img/JUSTIN-on-desk.jpg")
@@ -286,18 +292,24 @@ block content
       img.tablet(src="/img/justin-ipad-portrait.png")
       //- img.ibm(src="/img/justin-2009-ibm.png")
     p While this build process is not ideal for every kind of site, it was an excellent solution to both support the Wordpress CMS requirement and the extreme flexibility the client designs demanded.
+    p.site-link
+      a.link(href="http://justinwine.com", target="_blank") Visit Justin Winery
+      | &nbsp
+      | or
+      | &nbsp
+      a.link(href="http://landmarkwine.com", target="_blank") Landmark Vineyards
 
     h3 Halos Mandarin Oranges
     p: img(src="img/halos-desktop.png").full-bleed
     p Part of a record setting $100 million marketing campaign for a new agriculture brand, this website is built on a wordpress backend to support the client's familiarity.  Using custom fields, almost all of the site content is hot swappable through the CMS.  GruntJS was used to precompile, concatenate, and minify Stylus and CoffeeScript and the whole project is deployed via Git and SSH with separate dev, staging, and production environments.
     p On the front end it utilizes Skroller for parallax animations, CreateJS for vector canvas animations, and YouTube's api for rich video metadata.
     p Perhaps most impressive is the cross device and cross browser support back to IE9 despite the pervasive use of gradients, parallax, and hardware accelerated CSS3 animations.
-
+    p.site-link: a.link(href="http://halosfun.com", target="_blank") View the Site
   //- section.work#ecommerce
   //-   p: h1(style="color: red;") insert ADN project as an NDA thing
 
   section#art
-    h2 Photography is my longest lived hobby, and one of my earliest inspirations to get into software and web development.
+    h2 I have a long lived passion for photography
 
     .image-grid
 
@@ -448,22 +460,22 @@ block content
   //-   h2 I love single malt highland scotch matured in used oak casks from Xeres Spain, single origin coffee roasted by bearded men with tatoos, Japanese rally inspired sports cars, aged robusto cigars and bank robbery movies.  I'm conservative enough to be considered old school but wild enough to snowboard down a mountain in a speedo.
 
   section.where
-    h2 I am currently living the dream in downtown LA.
+    h3 I am currently living the dream in downtown LA.
 
-  section.todos
+    //- section.todos
 
     //- li make sure that javascript is minified and gzipped!
     //- li fix the typos
     //- li update all the anchor links throughout the page (maybe re-implement scrollTo)
     //- li lock down 12 column grid and or centering rules
     //- li lock down the typography rules
-    li fix responsive for tablet and mobile
-    li deploy to github publicly and add the link to the project
-    li deploy the project
-    hr
-    li maybe add a sticky nav or some scroll rules for the back to top
-    li maybe add the google map to the bottom of the page
-    li update behance with imagery from your newer projects
+    //- li fix responsive for tablet and mobile
+
+    //- li deploy the project
+    //- hr
+    //- li maybe add a sticky nav or some scroll rules for the back to top
+    //- li maybe add the google map to the bottom of the page
+    //- li update behance with imagery from your newer projects
 
 
   footer

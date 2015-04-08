@@ -17,8 +17,6 @@ html, body
   text-align center
   img
     display block
-    margin auto
-    padding 2%
     max-width 96%
     margin auto
     padding 3em
@@ -27,11 +25,15 @@ html, body
       display inline-block
       padding 1em .5em
       text-align center
-
+    +below(mobile)
+      max-width 100%
+      padding 2rem
 
 #skills-tag-container
   text-align center
   margin-top 3em
+  +below(tablet-portrait)
+    padding 2em 0em
 
 
 
@@ -82,6 +84,7 @@ nav.social
     li
       span(1/4)
       background none
+
 +above(mobile)
   nav.social, nav.social-2
     .telephone
@@ -172,24 +175,15 @@ nav.social
         -webkit-filter grayscale(0)
 
 #teampics
-  width 98%
-  display block
-  text-align center
   width 96%
   display block
   text-align center
   img
     display inline-block
-    margin 2%
-    max-width 20%
-    display inline-block
     margin 3%
     max-width 25%
 
 #functional-spec
-  max-width 760px
-  margin auto
-  text-align center
   max-width 760px
   margin auto
   text-align center
@@ -212,6 +206,7 @@ figcaption
   margin auto
 
   padding 0em 0em 2em 2em
+
   li
     margin 1em 0em
     &:before
@@ -220,6 +215,22 @@ figcaption
       position absolute
       margin-left -2em
       margin-top 2px
+
+  +below(mobile)
+    padding 0em 2rem
+    li
+      margin 0px
+    li:before
+      content "\e607"
+      // content "\e601 \e606 \e602"
+      float left
+      width 100%
+      position relative
+      text-align center
+      padding 1rem
+    li:first-child:before
+      content ""
+      padding 0px
 
 footer
   background #3a3a3a
@@ -273,30 +284,3 @@ footer
       background lightseagreen
 
 
-+above(mobile)
-  section aside
-    width 100%
-
-  header
-    // margin-top 5em
-    ul
-      float right
-      text-align right
-      margin-right 1%
-    li
-      display inline-block
-      a
-        border-radius 2px
-
-+above(1200px)
-  footer
-    padding 0px
-+above(1439px)
-  #nav-btns
-    max-width 40%
-    float left
-    position absolute
-    left 2%
-    top 55px
-    text-align left
-    margin auto

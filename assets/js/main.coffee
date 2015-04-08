@@ -89,7 +89,7 @@ app.controller 'SkillsTagCtrl', [
         ]
       }
       {
-        'name': 'Frameworks/Libraries'
+        'name': 'Frameworks / Libraries'
         'list': [
           {
             'name': 'AngularJS'

@@ -4,12 +4,6 @@
 
 
 
-
-+below(1024px)
-  body
-    background olive
-
-
 header
   padding 3rem 0 2rem 0
   background white
@@ -28,7 +22,8 @@ header
 .center-constrained
   center(1200px, 3em)
 
-
+p.site-link
+  text-align center
 section, .grid
   cf()
 
@@ -40,19 +35,25 @@ section, .grid
 
   article
     col(1/3, cycle:3, gutter: 5)
-    +below(tablet)
-      stack()
-    &:last-child
-      shift(1/3)
+
+    +between(769px,tablet)
+      col(1/2, uncycle:3, cycle:2, gutter: 5)
+      &:last-child
+        shift(1/4)
+
+
+    +above(1025px)
+      &:last-child
+        shift(1/3)
     h3
       font-family 'Lato'
       font-weight 700
       font-size 1rem
       line-height 1.8
 
-
-
-
+  article
+    +below(tablet-portrait)
+      stack()
 
 
 .grid
@@ -106,15 +107,16 @@ section, .grid
 section.intro
   background white
   padding-top 0px
-  a
-    line-height 1.1
+  +above(mobile)
+    a
+      line-height 1.1
 
-  a:hover
-    // color silver
-    // text-decoration underline
-    color firebrick
-    border-bottom 5px solid firebrick
-    // box-sizing padding-box
+    a:hover
+      // color silver
+      // text-decoration underline
+      color firebrick
+      border-bottom 5px solid firebrick
+      // box-sizing padding-box
 
 figure.full-wide
   max-width 80%
@@ -165,6 +167,125 @@ img.ibm
       padding-bottom 1rem
     figcaption
       margin-bottom 4rem
+
+
+
++above(mobile)
+
+  .mobile
+    display none !important
+
+  section aside
+    width 100%
+
+  header
+    // margin-top 5em
+    ul
+      float right
+      text-align right
+      margin-right 1%
+    li
+      display inline-block
+      a
+        border-radius 2px
+
++above(1200px)
+  footer
+    padding 0px
++above(1439px)
+  #nav-btns
+    max-width 40%
+    float left
+    position absolute
+    left 2%
+    top 55px
+    text-align left
+    margin auto
+
++below(tablet-portrait)
+  footer
+    display none
+
+  .small-images
+    max-width 80%
+    margin auto
+    a img
+      height auto
+      max-height 1000px
+      padding 2em
+  #art
+    .image-grid
+      width 100%
+      padding 0rem mobile-padding
+  section.where
+    padding 0px
+    margin 0px
+    h3
+      max-width 499px
+      padding-top 0px
+      margin auto
+      padding-bottom 4rem
+
++below(mobile)
+
+  section.intro
+    display none !important
+
+  .headshot
+    max-width 125px
+
+  section.mobile-intro
+    background white
+    padding-top 0px
+    p
+      margin 0px
+      padding 0rem 1rem 1rem 1rem
+    h1, h1 a
+      font-size 1.4rem
+      // padding 0rem 1rem
+      margin 0px
+      line-height 1.5
+      text-align center
+    h1 a
+      padding 0px
+      display inline
+    h1
+      display inline-block
+      padding 0px 2rem
+  .center-constrained, cite, figcaption,
+  .small-images
+    padding-left mobile-padding
+    padding-right mobile-padding
+  body section article p,
+  p h3,
+  figcaption h3,
+  article h3,
+  #specialization h3
+    padding-left 0px
+    padding-right 0px
+  .small-images
+    max-width 100%
+    a img
+      height auto
+      max-height 1000px
+      padding 1.2em
+  #specialization, #specialization h3
+    padding-top 0px
+
+  #design
+    padding-bottom 0px
+
+  #art
+    .image-grid
+      width 100%
+    figure
+      margin-bottom 2px
+      figcaption
+        display none
+
+
+
+
 
 // TEMPORARY
 .todos
