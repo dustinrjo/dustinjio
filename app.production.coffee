@@ -5,6 +5,8 @@ js_pipeline  = require 'js-pipeline'
 css_pipeline = require 'css-pipeline'
 jeet = require 'jeet'
 
+# options =
+#   comments: true
 
 module.exports =
   ignores: ['readme.md', '**/layout.*', '**/_*', '.gitignore', 'ship.*conf']
